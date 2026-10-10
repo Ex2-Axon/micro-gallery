@@ -1,26 +1,23 @@
 # Gallery Project Rules
 
-These rules define the baseline structure and dependency policy for the `gallery/` project.
+These rules describe the current `gallery` application and how to make compatible changes.
 
-## Baseline structure
-- The `gallery/` folder structure as it exists now is the reference baseline.
-- New or updated implementations must preserve this structure or extend it while remaining compatible.
+## Source of truth
 
-## Baseline versions (minimum)
-Based on `gallery/package.json`:
-- `next`: `16.2.7`
-- `react`: `19.2.4`
-- `react-dom`: `19.2.4`
-- `tailwindcss`: any `4.x` version
-- `@tailwindcss/postcss`: any `4.x` version
+- `package.json` declares the dependency ranges and scripts.
+- `pnpm-lock.yaml` is the source of exact resolved dependency versions.
+- Do not copy version numbers into project guidance. When upgrading, keep `next` and `eslint-config-next` aligned, check peer compatibility, and run the project validation commands.
 
-These versions are the minimum baseline for the `gallery` project. Use this version or newer.
+## Application structure
 
-## Core rules
-- Tailwind CSS version 4 is required for `gallery`.
-- Do not use middleware in `gallery`.
-- Use proxy-based handling instead of middleware.
+- Use the existing root-level Next.js App Router structure under `app/`; do not introduce `src/` or legacy `pages/` routing.
+- Use `proxy.ts` only when dynamic request interception is required; use Next.js configuration for static redirects/rewrites. Do not add `middleware.ts` or `middleware.js`.
+- Keep template metadata in `data/templates.json`, shared configuration in `data/config.ts`, and the image-discovery/data-merge logic in `data/templates.ts`.
+- Numbered images named `x-template-<number>.<extension>` in `public/` are discovered automatically. Custom filenames and metadata need explicit entries in `data/templates.json`.
+- Keep gallery pagination at 12 items per page unless the product requirement changes. Template detail routes are generated from the combined template list.
 
-## Notes
-- The current `gallery/package.json` is the source of truth for the baseline versions.
-- If the project is upgraded, the new version must be equal or newer than these baselines.
+## Dependency and change policy
+
+- Use `pnpm` for installs and dependency updates.
+- Avoid adding dependencies without a concrete need. Verify the current manifest instead of assuming packages mentioned in generic instructions are installed.
+- Validate application/dependency changes with `pnpm lint`, `pnpm exec tsc --noEmit`, and `pnpm build`.

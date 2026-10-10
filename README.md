@@ -1,100 +1,61 @@
-# Gallery
+# Axon Template Gallery
 
-Next.js 16 + App Router project for a gallery-style template showcase.
+A Next.js App Router site for browsing template previews, viewing individual template details, and comparing pricing options.
 
-## Overview
+## Stack and requirements
 
-This repository contains a modern Next.js application using:
+The package manifest and lockfile are the authoritative sources for installed and resolved versions. Use `pnpm` for dependency management. The current app uses Next.js 16, React 19, TypeScript, and Tailwind CSS 4. Review `package.json` before changing versions; keep `next` and `eslint-config-next` aligned, and validate major upgrades with the checks below.
 
-- `next` v16.2.7
-- `react` v19.2.4
-- `tailwindcss` v4
-- TypeScript
-- `@tailwindcss/postcss`
+The app currently has no authentication, database, or API-backed content. Template entries and image assets are local to the repository.
 
-The app is organized with the App Router under `app/` and includes reusable page templates for the gallery and pricing views.
+## Routes and rendering
 
-## Recommended Workflow
+- `/` renders the gallery and its search and pagination controls.
+- `/pricing` renders the pricing tiers and contact links.
+- `/template/[slug]` renders a template detail page. `generateStaticParams()` uses the combined template list to pre-render detail routes.
 
-Use `pnpm` for all local development and dependency management.
+`app/page.tsx` and the detail/pricing pages are Server Components. `app/TemplateGallery.tsx` is a Client Component because search and pagination use local state.
 
-### Install dependencies
+## How template data and images work
+
+`data/templates.ts` discovers numbered images directly in `public/` whose filenames match `x-template-<number>.<extension>`. Supported extensions are AVIF, WebP, PNG, JPG, and JPEG, in that preference order. The module infers each discovered entry's demo URL as `https://ex2-axon.github.io/<name>/`.
+
+`data/templates.json` contains configured entries, including custom/special filenames and metadata. Configured entries take precedence over automatically discovered entries with the same name. Add custom image paths, display names, or demo URLs here; the referenced image must also exist in `public/`.
+
+Discovery runs when the server/build loads the data module, not through a file-watching upload service. After adding an image or changing metadata, restart the development server if necessary and rebuild/redeploy to include the change in generated pages. The gallery filters the full list, shows 12 items per page, and lazy-loads gallery thumbnails.
+
+Pricing and shared external links are defined in `data/config.ts`.
+
+## Project map
+
+- `app/page.tsx` — gallery home page and footer
+- `app/TemplateGallery.tsx` — client-side search, pagination, and thumbnail grid
+- `app/template/[slug]/page.tsx` — statically generated template details
+- `app/pricing/page.tsx` — pricing and contact information
+- `app/layout.tsx` — root layout, metadata, and locally bundled Next font setup
+- `app/globals.css` — Tailwind CSS import and global styling
+- `data/templates.ts` — automatic image discovery and data merge
+- `data/templates.json` — explicit template entries
+- `data/config.ts` — pricing and shared link constants
+- `public/` — gallery images and other static assets
+- `next.config.ts` — Next.js configuration, including the loopback dev origin
+
+## Development
 
 ```bash
 pnpm install
-```
-
-### Run the app locally
-
-```bash
 pnpm dev
 ```
 
-Open `http://localhost:3000` in your browser.
-
-### Build for production
-
-```bash
-pnpm build
-```
-
-### Start production server
-
-```bash
-pnpm start
-```
-
-### Run linting
+Open `http://localhost:3000`.
 
 ```bash
 pnpm lint
+pnpm exec tsc --noEmit
+pnpm build
+pnpm start
 ```
 
-## Project Structure
+## Related project guidance
 
-- `app/` - App Router pages and layouts
-- `app/page.tsx` - Main gallery landing page
-- `app/layout.tsx` - App layout and metadata wrapper
-- `app/globals.css` - Global styles and Tailwind theme tokens
-- `app/pricing/page.tsx` - Pricing page
-- `app/template/[slug]/page.tsx` - Template detail pages
-- `app/TemplateGallery.tsx` - Shared gallery component
-- `data/` - Template content and configuration data
-- `public/` - Static assets
-
-## Notes
-
-- This project uses Tailwind CSS v4 and should define theme colors in `app/globals.css` using `@theme`.
-- The application follows App Router conventions and avoids legacy `pages/` routing.
-- `package.json` is configured for pnpm usage.
-
-## Adding templates
-
-The gallery automatically discovers new images in `public/` when their filename
-matches `x-template-<number>.<extension>`, where the extension is `avif`, `webp`,
-`png`, `jpg`, or `jpeg`. For example, adding `public/x-template-054.webp` creates
-the `x-template-054` gallery item and its detail page at the next build. The demo
-URL is inferred as `https://ex2-axon.github.io/x-template-054/`.
-
-The gallery prefers AVIF, then WebP, PNG, JPG, and JPEG when multiple image
-formats exist for the same numbered template. New files are discovered during
-the build, so deploy again after adding an image.
-
-For a custom display name, demo URL, or special template filename, add the entry
-to `data/templates.json`. Entries there override the automatically inferred
-image and metadata. The gallery shows 12 templates per page, searches across the
-full list, and lazily loads the images on the current page.
-
-## Gallery Rules
-
-See [GALLERY_RULES.md](./GALLERY_RULES.md) for baseline structure, naming conventions, and version rules.
-
-## Useful links
-
-- [Next.js Docs](https://nextjs.org/docs)
-- [Tailwind CSS v4](https://tailwindcss.com/docs)
-- [pnpm](https://pnpm.io)
-
-## License
-
-This project is private by default. Update the license section when you choose a license.
+See [AGENTS.md](./AGENTS.md) for repository-specific instructions and [GALLERY_RULES.md](./GALLERY_RULES.md) for project structure and dependency policy.

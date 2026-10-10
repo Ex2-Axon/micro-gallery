@@ -1,3 +1,29 @@
+# Repository-specific guide: Axon Template Gallery
+
+Read this section alongside the general guidance below. When instructions conflict with the actual repository setup, use `package.json`, `pnpm-lock.yaml`, and the current source as factual references; do not assume framework versions or files from generic examples.
+
+## Application map
+
+- This is a root-level Next.js App Router application. Routes are `app/page.tsx` (`/`), `app/pricing/page.tsx` (`/pricing`), and `app/template/[slug]/page.tsx` (`/template/[slug]`).
+- `app/TemplateGallery.tsx` is the interactive client component for search and 12-item pagination. The route pages and root layout are server-rendered.
+- `data/templates.ts` combines explicit metadata from `data/templates.json` with numbered image files discovered in `public/`. `data/config.ts` holds shared pricing and external-link constants.
+- The detail routes are statically generated from the combined template list. No database, authentication system, or application API is currently used.
+- `next.config.ts` allows the `127.0.0.1` development origin; preserve this unless the local development setup changes and the pagination/image hydration issue is retested.
+
+## Template content workflow
+
+- Automatically discovered images must be directly under `public/` and named `x-template-<number>.<extension>`. Supported extensions are `avif`, `webp`, `png`, `jpg`, and `jpeg`; AVIF is preferred when more than one format exists for a template.
+- Add custom names, special image paths, and/or non-default demo URLs as entries in `data/templates.json`. The referenced image still needs to exist in `public/`. Explicit entries override discovered entries with the same name.
+- Image discovery is performed by the server-side data module during build/rendering, not by a live upload or background watcher. Rebuild/redeploy to publish newly added image assets and generated detail routes.
+- Keep the gallery page size at 12 unless the product requirement changes. Search is over the full template list, while pagination is applied to the filtered results.
+
+## Dependency and validation policy
+
+- Use `pnpm` for package operations. `package.json` declares dependency ranges; `pnpm-lock.yaml` records the exact resolved versions. Do not hardcode version claims in docs or source independently of these files.
+- Keep `next` and `eslint-config-next` aligned. Check peer compatibility before major upgrades and run `pnpm lint`, `pnpm exec tsc --noEmit`, and `pnpm build` after dependency or application changes.
+- Do not add dependencies unless the feature requires them. In particular, do not assume Framer Motion or Lucide React is installed; inspect the manifest first.
+- Follow the global architecture and styling constraints below when writing new UI. Do not claim existing pages already implement global requirements (such as cookie consent or footer links) unless verified in the current source.
+
 # AI AGENTS RULES & GUIDELINES FOR NEXT.JS 16
 
 <!-- BEGIN:nextjs-agent-rules -->
