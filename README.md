@@ -68,6 +68,23 @@ pnpm lint
 - The application follows App Router conventions and avoids legacy `pages/` routing.
 - `package.json` is configured for pnpm usage.
 
+## Adding templates
+
+The gallery automatically discovers new images in `public/` when their filename
+matches `x-template-<number>.<extension>`, where the extension is `avif`, `webp`,
+`png`, `jpg`, or `jpeg`. For example, adding `public/x-template-054.webp` creates
+the `x-template-054` gallery item and its detail page at the next build. The demo
+URL is inferred as `https://ex2-axon.github.io/x-template-054/`.
+
+The gallery prefers AVIF, then WebP, PNG, JPG, and JPEG when multiple image
+formats exist for the same numbered template. New files are discovered during
+the build, so deploy again after adding an image.
+
+For a custom display name, demo URL, or special template filename, add the entry
+to `data/templates.json`. Entries there override the automatically inferred
+image and metadata. The gallery shows 12 templates per page, searches across the
+full list, and lazily loads the images on the current page.
+
 ## Gallery Rules
 
 See [GALLERY_RULES.md](./GALLERY_RULES.md) for baseline structure, naming conventions, and version rules.

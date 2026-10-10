@@ -1,22 +1,20 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { PRICE } from "../data/config";
-
-interface Template {
-  name: string;
-  url: string;
-  image: string;
-}
+import type { Template } from "../data/templates";
 
 interface TemplateGalleryProps {
   initialTemplates: Template[];
 }
 
+const PAGE_SIZE = 12;
+
 export default function TemplateGallery({ initialTemplates }: TemplateGalleryProps) {
   const [search, setSearch] = useState("");
+  const [page, setPage] = useState(1);
 
   const sortedTemplates = useMemo(() => {
     return [...initialTemplates].reverse();
@@ -27,6 +25,17 @@ export default function TemplateGallery({ initialTemplates }: TemplateGalleryPro
       template.name.toLowerCase().includes(search.toLowerCase())
     );
   }, [search, sortedTemplates]);
+  const pageCount = Math.ceil(filteredTemplates.length / PAGE_SIZE);
+  const currentPage = Math.min(page, Math.max(pageCount, 1));
+  const visibleTemplates = filteredTemplates.slice(
+    (currentPage - 1) * PAGE_SIZE,
+    currentPage * PAGE_SIZE,
+  );
+  const firstPageNumber = Math.max(1, Math.min(currentPage - 2, pageCount - 4));
+  const pageNumbers = Array.from(
+    { length: Math.min(pageCount, 5) },
+    (_, index) => firstPageNumber + index,
+  );
 
   return (
     <div className="space-y-8">
@@ -51,7 +60,10 @@ export default function TemplateGallery({ initialTemplates }: TemplateGalleryPro
             type="text"
             placeholder="ค้นหาชื่อเทมเพลต..."
             value={search}
-            onChange={(e) => setSearch(e.target.value)}
+            onChange={(event) => {
+              setSearch(event.target.value);
+              setPage(1);
+            }}
             className="w-full rounded-2xl border-none bg-slate-100 py-3 pl-12 pr-4 text-sm font-medium text-slate-900 placeholder:text-slate-500 focus:ring-2 focus:ring-slate-900"
           />
         </div>
@@ -63,7 +75,7 @@ export default function TemplateGallery({ initialTemplates }: TemplateGalleryPro
       {/* Gallery Grid */}
       <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {filteredTemplates.length > 0 ? (
-          filteredTemplates.map((template) => (
+          visibleTemplates.map((template) => (
             <Link
               key={template.name}
               href={`/template/${template.name}`}
@@ -76,6 +88,7 @@ export default function TemplateGallery({ initialTemplates }: TemplateGalleryPro
                     src={template.image}
                     alt={template.name}
                     fill
+                    loading="lazy"
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transition duration-500 group-hover:scale-110"
                   />
@@ -113,6 +126,46 @@ export default function TemplateGallery({ initialTemplates }: TemplateGalleryPro
           </div>
         )}
       </div>
+
+      {pageCount > 1 && (
+        <nav
+          aria-label="Pagination"
+          className="flex flex-wrap items-center justify-center gap-2"
+        >
+          <button
+            type="button"
+            onClick={() => setPage(currentPage - 1)}
+            disabled={currentPage === 1}
+            className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            ก่อนหน้า
+          </button>
+          {pageNumbers.map((pageNumber) => (
+            <button
+              key={pageNumber}
+              type="button"
+              onClick={() => setPage(pageNumber)}
+              aria-current={currentPage === pageNumber ? "page" : undefined}
+              aria-label={`หน้า ${pageNumber}`}
+              className={`h-10 min-w-10 rounded-xl border px-3 text-sm font-semibold transition ${
+                currentPage === pageNumber
+                  ? "border-slate-900 bg-slate-900 text-white"
+                  : "border-slate-200 bg-white text-slate-700 hover:bg-slate-100"
+              }`}
+            >
+              {pageNumber}
+            </button>
+          ))}
+          <button
+            type="button"
+            onClick={() => setPage(currentPage + 1)}
+            disabled={currentPage === pageCount}
+            className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-50"
+          >
+            ถัดไป
+          </button>
+        </nav>
+      )}
     </div>
   );
 }

@@ -1,6 +1,5 @@
-import Image from "next/image";
 import Link from "next/link";
-import { templates } from "../data/data";
+import { templates } from "../data/templates";
 import { PRICE, PRIVACY_POLICY_URL, COMPANY_URL, COMPANY_NAME } from "../data/config";
 import TemplateGallery from "./TemplateGallery";
 

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { templates } from "../../../data/data";
+import { templates } from "../../../data/templates";
 import { PRICE, PRIVACY_POLICY_URL, COMPANY_URL, COMPANY_NAME, PAYMENT_URL } from "../../../data/config";
 
 export function generateStaticParams() {
