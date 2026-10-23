@@ -1,11 +1,31 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { templates } from "../../../data/templates";
-import { PRICE, PRIVACY_POLICY_URL, COMPANY_URL, COMPANY_NAME, PAYMENT_URL } from "../../../data/config";
+import { PAYMENT_URL, PRICE, PRICE_FORMATTER } from "../../../data/config";
+import Footer from "../../ui/Footer";
 
 export function generateStaticParams() {
   return templates.map((template) => ({ slug: template.name }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const template = templates.find((item) => item.name === slug);
+
+  if (!template) {
+    return { title: "ไม่พบเทมเพลต | Axon Template Gallery" };
+  }
+
+  return {
+    title: `${template.name} | Axon Template Gallery`,
+    description: `ดูภาพตัวอย่างและลิงก์เดโมของ ${template.name} จาก Axon Template Gallery`,
+  };
 }
 
 export default async function TemplatePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -18,7 +38,7 @@ export default async function TemplatePage({ params }: { params: Promise<{ slug:
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
-      <main className="mx-auto flex min-h-screen max-w-7xl flex-col px-4 py-8 sm:px-6 lg:px-8">
+      <main id="main-content" className="mx-auto flex min-h-screen max-w-7xl flex-col px-4 py-8 sm:px-6 lg:px-8">
         {/* Navigation Bar */}
         <div className="mb-6 flex items-center justify-between rounded-3xl border border-slate-200 bg-white/80 p-4 shadow-sm backdrop-blur-md sm:p-6">
           <Link
@@ -43,7 +63,7 @@ export default async function TemplatePage({ params }: { params: Promise<{ slug:
         <div className="grid gap-8 lg:grid-cols-12">
           {/* Main Content Area */}
           <div className="space-y-8 lg:col-span-8">
-            <div className="overflow-hidden rounded-[2.5rem] border border-slate-200 bg-white shadow-sm transition-all hover:shadow-md">
+            <div className="overflow-hidden rounded-[2.5rem] border border-slate-200 bg-white shadow-sm transition-shadow hover:shadow-md">
               <div className="p-1">
                 {template?.image ? (
                   <div className="relative aspect-video w-full overflow-hidden rounded-[2.25rem]">
@@ -76,30 +96,20 @@ export default async function TemplatePage({ params }: { params: Promise<{ slug:
                 <div className="rounded-2xl bg-slate-50 p-6">
                   <p className="text-sm font-medium text-slate-500">ราคาเริ่มต้น</p>
                   <div className="mt-1 flex items-baseline gap-1">
-                    <span className="text-4xl font-bold text-slate-900">{PRICE.toLocaleString()}</span>
+                    <span className="text-4xl font-bold text-slate-900">{PRICE_FORMATTER.format(PRICE)}</span>
                     <span className="text-lg font-medium text-slate-500">บาท</span>
                   </div>
                   <Link href="/pricing" className="mt-2 block text-xs font-medium text-slate-500 hover:text-slate-900 underline">
-                    ดูรายละเอียดแพ็กเกจและข้อตกลง →
+                    ดูราคาและเงื่อนไขการซื้อ →
                   </Link>
                 </div>
 
-                <div className="space-y-4">
-                  <h3 className="text-sm font-bold uppercase tracking-wider text-slate-900">รายละเอียด</h3>
-                  <ul className="space-y-3 text-sm text-slate-600">
-                    <li className="flex gap-3">
-                      <svg className="h-5 w-5 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/></svg>
-                      ดีไซน์ทันสมัย รองรับมือถือ (Mobile First)
-                    </li>
-                    <li className="flex gap-3">
-                      <svg className="h-5 w-5 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/></svg>
-                      ความเร็วสูงด้วย Vite 8 และ Tailwind CSS 4
-                    </li>
-                    <li className="flex gap-3">
-                      <svg className="h-5 w-5 shrink-0 text-emerald-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"/></svg>
-                      ปรับแต่งได้ง่ายตามต้องการ
-                    </li>
-                  </ul>
+                <div className="space-y-2">
+                  <h2 className="text-sm font-bold uppercase tracking-wider text-slate-900">ข้อมูลเทมเพลต</h2>
+                  <p className="text-sm leading-6 text-slate-600">
+                    เทคโนโลยี ฟีเจอร์ ใบอนุญาต และขอบเขตการปรับแต่งอาจแตกต่างกันในแต่ละรายการ
+                    โปรดตรวจสอบข้อมูลจากหน้าเดโมและยืนยันรายละเอียดก่อนสั่งซื้อ
+                  </p>
                 </div>
 
                 <div className="pt-4">
@@ -127,26 +137,7 @@ export default async function TemplatePage({ params }: { params: Promise<{ slug:
           </div>
         </div>
       </main>
-      <footer className="border-t border-slate-200 bg-white py-10 text-center text-sm text-slate-600">
-        <div className="mx-auto max-w-7xl px-4 flex flex-col items-center gap-4">
-          <p className="flex items-center gap-2 font-medium">
-            <span>🌐</span>
-            <span className="uppercase tracking-wider">Official Website</span>
-            <span>⭐</span>
-            <a href={COMPANY_URL} target="_blank" rel="noreferrer" className="text-slate-900 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-900">
-              {COMPANY_URL}
-            </a>
-          </p>
-          <div className="space-y-1">
-            <p>© {new Date().getFullYear()} {COMPANY_NAME}</p>
-            <div className="mt-2 flex justify-center gap-4">
-              <a href={PRIVACY_POLICY_URL} target="_blank" rel="noreferrer" className="text-slate-500 hover:text-slate-900">
-                Privacy Policy
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

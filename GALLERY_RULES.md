@@ -20,4 +20,4 @@ These rules describe the current `gallery` application and how to make compatibl
 
 - Use `pnpm` for installs and dependency updates.
 - Avoid adding dependencies without a concrete need. Verify the current manifest instead of assuming packages mentioned in generic instructions are installed.
-- Validate application/dependency changes with `pnpm lint`, `pnpm exec tsc --noEmit`, and `pnpm build`.
+- Validate application/dependency changes with `pnpm lint`, `pnpm exec tsc --noEmit`, `pnpm test`, and `pnpm build`.

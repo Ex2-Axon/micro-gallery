@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { PRICE } from "../data/config";
+import { PRICE, PRICE_FORMATTER } from "../data/config";
 import type { Template } from "../data/templates";
 
 interface TemplateGalleryProps {
@@ -43,6 +43,7 @@ export default function TemplateGallery({ initialTemplates }: TemplateGalleryPro
       <div className="sticky top-4 z-10 flex flex-col gap-4 rounded-[2rem] border border-slate-200 bg-white/80 p-4 shadow-sm backdrop-blur-xl sm:flex-row sm:items-center sm:p-6">
         <div className="relative flex-1">
           <svg
+            aria-hidden="true"
             className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -56,31 +57,36 @@ export default function TemplateGallery({ initialTemplates }: TemplateGalleryPro
               d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
             />
           </svg>
+          <label htmlFor="template-search" className="sr-only">
+            ค้นหาชื่อเทมเพลต
+          </label>
           <input
-            type="text"
-            placeholder="ค้นหาชื่อเทมเพลต..."
+            id="template-search"
+            name="search"
+            type="search"
+            autoComplete="off"
+            placeholder="ค้นหาชื่อเทมเพลต…"
             value={search}
             onChange={(event) => {
               setSearch(event.target.value);
               setPage(1);
             }}
-            className="w-full rounded-2xl border-none bg-slate-100 py-3 pl-12 pr-4 text-sm font-medium text-slate-900 placeholder:text-slate-500 focus:ring-2 focus:ring-slate-900"
+            className="w-full rounded-2xl border-none bg-slate-100 py-3 pl-12 pr-4 text-sm font-medium text-slate-900 placeholder:text-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900"
           />
         </div>
-        <div className="flex items-center gap-2 px-2 text-sm font-medium text-slate-500">
+        <div aria-live="polite" className="flex items-center gap-2 px-2 text-sm font-medium text-slate-500">
           <span>พบ {filteredTemplates.length} รายการ</span>
         </div>
       </div>
 
       {/* Gallery Grid */}
-      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <section aria-label="รายการเทมเพลต" className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {filteredTemplates.length > 0 ? (
           visibleTemplates.map((template) => (
             <Link
               key={template.name}
               href={`/template/${template.name}`}
-              target="_blank"
-              className="group overflow-hidden rounded-[2rem] border border-slate-200 bg-white transition-all hover:-translate-y-1 hover:shadow-xl"
+              className="group overflow-hidden rounded-[2rem] border border-slate-200 bg-white transition hover:-translate-y-1 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
             >
               <div className="relative h-48 bg-slate-100">
                 {template.image ? (
@@ -105,11 +111,11 @@ export default function TemplateGallery({ initialTemplates }: TemplateGalleryPro
                   <h2 className="mt-2 text-2xl font-bold text-slate-900">{template.name}</h2>
                 </div>
                 <p className="text-sm leading-6 text-slate-600 line-clamp-2">
-                  คลิกเพื่อดูรายละเอียดและตัวอย่างหน้าเว็บจริง พร้อมฟีเจอร์ที่รองรับ.
+                  คลิกเพื่อดูรายละเอียดและลิงก์เดโมของเทมเพลตนี้
                 </p>
                 <div className="flex items-center justify-between pt-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-slate-400">Price Start</span>
-                  <span className="text-lg font-bold text-slate-900">{PRICE.toLocaleString()} ฿</span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-slate-400">ราคา</span>
+                  <span className="text-lg font-bold text-slate-900">{PRICE_FORMATTER.format(PRICE)} ฿</span>
                 </div>
               </div>
             </Link>
@@ -125,7 +131,7 @@ export default function TemplateGallery({ initialTemplates }: TemplateGalleryPro
             <p className="mt-2 text-slate-500">ลองใช้คำค้นหาอื่นดูอีกครั้งครับ</p>
           </div>
         )}
-      </div>
+      </section>
 
       {pageCount > 1 && (
         <nav
@@ -136,7 +142,7 @@ export default function TemplateGallery({ initialTemplates }: TemplateGalleryPro
             type="button"
             onClick={() => setPage(currentPage - 1)}
             disabled={currentPage === 1}
-            className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-50"
+            className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 disabled:cursor-not-allowed disabled:opacity-50"
           >
             ก่อนหน้า
           </button>
@@ -147,7 +153,7 @@ export default function TemplateGallery({ initialTemplates }: TemplateGalleryPro
               onClick={() => setPage(pageNumber)}
               aria-current={currentPage === pageNumber ? "page" : undefined}
               aria-label={`หน้า ${pageNumber}`}
-              className={`h-10 min-w-10 rounded-xl border px-3 text-sm font-semibold transition ${
+              className={`h-10 min-w-10 rounded-xl border px-3 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 ${
                 currentPage === pageNumber
                   ? "border-slate-900 bg-slate-900 text-white"
                   : "border-slate-200 bg-white text-slate-700 hover:bg-slate-100"
@@ -160,7 +166,7 @@ export default function TemplateGallery({ initialTemplates }: TemplateGalleryPro
             type="button"
             onClick={() => setPage(currentPage + 1)}
             disabled={currentPage === pageCount}
-            className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 disabled:cursor-not-allowed disabled:opacity-50"
+            className="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 disabled:cursor-not-allowed disabled:opacity-50"
           >
             ถัดไป
           </button>

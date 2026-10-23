@@ -1,6 +1,6 @@
 # Axon Template Gallery
 
-A Next.js App Router site for browsing template previews, viewing individual template details, and comparing pricing options.
+A Next.js App Router site for browsing template previews, viewing individual template details, and checking the template price.
 
 ## Stack and requirements
 
@@ -33,6 +33,8 @@ Pricing and shared external links are defined in `data/config.ts`.
 - `app/template/[slug]/page.tsx` — statically generated template details
 - `app/pricing/page.tsx` — pricing and contact information
 - `app/layout.tsx` — root layout, metadata, and locally bundled Next font setup
+- `app/ui/CookieNotice.tsx` — browser-storage preference notice and controls
+- `app/ui/Footer.tsx` — shared legal, social, contact, and company links
 - `app/globals.css` — Tailwind CSS import and global styling
 - `data/templates.ts` — automatic image discovery and data merge
 - `data/templates.json` — explicit template entries
@@ -52,9 +54,12 @@ Open `http://localhost:3000`.
 ```bash
 pnpm lint
 pnpm exec tsc --noEmit
+pnpm test
 pnpm build
 pnpm start
 ```
+
+`pnpm test` builds the app, then runs the Playwright smoke suite against a local production server on port `3184`. The cookie notice stores only the user's notice preference in versioned `localStorage`; it does not enable optional trackers.
 
 ## Related project guidance
 
