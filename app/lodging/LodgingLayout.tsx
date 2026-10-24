@@ -49,7 +49,7 @@ export default function LodgingLayout({ template }: LodgingLayoutProps) {
 
         <LocationSection location={template.location} />
 
-        <ContactSection contact={template.contact} lodgeName={template.name} />
+        <ContactSection contact={template.contact} />
       </main>
 
       <Footer />

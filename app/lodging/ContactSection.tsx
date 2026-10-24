@@ -3,10 +3,9 @@ import type { LodgingContact } from "../../data/templates";
 
 interface ContactSectionProps {
   contact: LodgingContact;
-  lodgeName: string;
 }
 
-export default function ContactSection({ contact, lodgeName }: ContactSectionProps) {
+export default function ContactSection({ contact }: ContactSectionProps) {
   return (
     <section id="contact" className="bg-gradient-to-b from-emerald-50 to-green-50 px-4 py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl">

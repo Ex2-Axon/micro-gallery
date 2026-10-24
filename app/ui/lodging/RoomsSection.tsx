@@ -3,10 +3,9 @@ import RoomCard from "./RoomCard";
 
 interface RoomsSectionProps {
   rooms: Room[];
-  hotelName: string;
 }
 
-export default function RoomsSection({ rooms, hotelName }: RoomsSectionProps) {
+export default function RoomsSection({ rooms }: RoomsSectionProps) {
   return (
     <section
       id="rooms"
@@ -20,7 +19,7 @@ export default function RoomsSection({ rooms, hotelName }: RoomsSectionProps) {
 
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         {rooms.map((room, index) => (
-          <RoomCard key={index} room={room} hotelName={hotelName} />
+          <RoomCard key={index} room={room} />
         ))}
       </div>
     </section>

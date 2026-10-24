@@ -4,10 +4,9 @@ import type { LodgingContact } from "@/data/templates";
 
 interface ContactSectionProps {
   contact: LodgingContact;
-  hotelName: string;
 }
 
-export default function ContactSection({ contact, hotelName }: ContactSectionProps) {
+export default function ContactSection({ contact }: ContactSectionProps) {
   return (
     <section
       id="contact"
@@ -19,9 +18,6 @@ export default function ContactSection({ contact, hotelName }: ContactSectionPro
 
       <div className="mx-auto max-w-2xl rounded-lg border border-gray-200 bg-gray-50 p-8">
         <div className="mb-8">
-          <h3 className="mb-2 text-xl font-semibold text-gray-900">
-            {hotelName}
-          </h3>
           <p className="mb-2 text-lg text-gray-900">
             {contact.phone}
           </p>

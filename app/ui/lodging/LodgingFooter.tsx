@@ -1,11 +1,6 @@
-import type { Template } from "@/data/templates";
 import Footer from "../Footer";
 
-interface LodgingFooterProps {
-  template?: Template;
-}
-
-export default function LodgingFooter({ template }: LodgingFooterProps) {
+export default function LodgingFooter() {
   return (
     <footer>
       <Footer />

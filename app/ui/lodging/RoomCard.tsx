@@ -2,10 +2,9 @@ import type { Room } from "@/data/templates";
 
 interface RoomCardProps {
   room: Room;
-  hotelName: string;
 }
 
-export default function RoomCard({ room, hotelName }: RoomCardProps) {
+export default function RoomCard({ room }: RoomCardProps) {
   const formattedPrice = new Intl.NumberFormat("th-TH").format(room.pricePerNight);
 
   return (

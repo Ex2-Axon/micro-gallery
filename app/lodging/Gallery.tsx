@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface GalleryProps {
   images?: string[];
 }
@@ -58,10 +60,11 @@ export default function Gallery({ images }: GalleryProps) {
                 <GalleryPlaceholder index={index} />
               ) : (
                 <div className="relative aspect-video w-full bg-slate-200">
-                  <img
+                  <Image
                     src={image}
                     alt={`บรรยากาศที่พัก ${index + 1}`}
-                    className="h-full w-full object-cover transition group-hover:scale-105"
+                    fill
+                    className="object-cover transition group-hover:scale-105"
                   />
                 </div>
               )}
