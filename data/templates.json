@@ -331,7 +331,6 @@
           "Wi-Fi ฟรี",
           "ระเบียงส่วนตัว"
         ],
-        "price": "เริ่มต้น 1,290 บาท/คืน",
         "pricePerNight": 1290,
         "priceCurrency": "บาท"
       },
@@ -346,7 +345,6 @@
           "Wi-Fi ฟรี",
           "ระเบียงกว้าง"
         ],
-        "price": "เริ่มต้น 1,890 บาท/คืน",
         "pricePerNight": 1890,
         "priceCurrency": "บาท"
       },
@@ -362,7 +360,6 @@
           "Wi-Fi ฟรี",
           "ระเบียง"
         ],
-        "price": "เริ่มต้น 2,490 บาท/คืน",
         "pricePerNight": 2490,
         "priceCurrency": "บาท"
       }
@@ -386,16 +383,16 @@
       "lineUrl": "https://line.me/R/ti/p/~baansuannature"
     },
     "gallery": [
-      "/gallery/x-template-next-011-01.avif",
-      "/gallery/x-template-next-011-02.avif",
-      "/gallery/x-template-next-011-03.avif",
-      "/gallery/x-template-next-011-04.avif",
-      "/gallery/x-template-next-011-05.avif",
-      "/gallery/x-template-next-011-06.avif",
-      "/gallery/x-template-next-011-07.avif",
-      "/gallery/x-template-next-011-08.avif",
-      "/gallery/x-template-next-011-09.avif",
-      "/gallery/x-template-next-011-10.avif"
+      "/x-template-next-011-01.avif",
+      "/x-template-next-011-02.avif",
+      "/x-template-next-011-03.avif",
+      "/x-template-next-011-04.avif",
+      "/x-template-next-011-05.avif",
+      "/x-template-next-011-06.avif",
+      "/x-template-next-011-07.avif",
+      "/x-template-next-011-08.avif",
+      "/x-template-next-011-09.avif",
+      "/x-template-next-011-10.avif"
     ],
     "about": "Baan Suan Lodge เป็นที่พักแบบบ้านเรือนไทยสมัยใหม่ ตั้งอยู่ท่ามกลางสวนสวยอันเขียวชอุ่ม ออกแบบมาเพื่อให้ผู้มาพักได้นั่งพักผ่อน ใจสบาย และอยู่ใกล้ชิดกับธรรมชาติ ทีมงานพร้อมให้บริการด้วยใจ"
   },
@@ -466,14 +463,14 @@
       "lineUrl": "https://line.me/R/ti/p/@cityinnminimal"
     },
     "gallery": [
-      "/gallery/x-template-next-012-1.avif",
-      "/gallery/x-template-next-012-2.avif",
-      "/gallery/x-template-next-012-3.avif",
-      "/gallery/x-template-next-012-4.avif",
-      "/gallery/x-template-next-012-5.avif",
-      "/gallery/x-template-next-012-6.avif",
-      "/gallery/x-template-next-012-7.avif",
-      "/gallery/x-template-next-012-8.avif"
+      "/x-template-next-012-gallery-1.avif",
+      "/x-template-next-012-gallery-2.avif",
+      "/x-template-next-012-gallery-3.avif",
+      "/x-template-next-012-gallery-4.avif",
+      "/x-template-next-012-gallery-5.avif",
+      "/x-template-next-012-gallery-6.avif",
+      "/x-template-next-012-gallery-7.avif",
+      "/x-template-next-012-gallery-8.avif"
     ]
   }
 ]
