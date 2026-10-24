@@ -6,18 +6,25 @@ export interface Room {
   name: string;
   description: string;
   amenities: string[];
-  price: string;
+  pricePerNight: number;
+  priceCurrency: "บาท";
+}
+
+export interface Facility {
+  name: string;
+  icon: "wifi" | "parking" | "ac" | "bathroom" | "hot-water" | "tv" | "elevator";
 }
 
 export interface LodgingLocation {
   address: string;
   directions?: string;
-  mapsLink: string;
+  googleMapsUrl: string;
 }
 
 export interface LodgingContact {
   phone: string;
   lineId: string;
+  lineUrl: string;
 }
 
 export interface Template {
@@ -26,12 +33,13 @@ export interface Template {
   image: string;
   type?: "general" | "lodging";
   tagline?: string;
+  about?: string;
   rooms?: Room[];
-  facilities?: string[];
+  facilities?: Facility[];
   location?: LodgingLocation;
   contact?: LodgingContact;
   gallery?: string[];
-  about?: string;
+  heroImage?: string;
 }
 
 const supportedExtensions = new Set(["avif", "webp", "png", "jpg", "jpeg"]);

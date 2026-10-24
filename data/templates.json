@@ -391,5 +391,103 @@
       "/gallery/x-template-next-011-10.avif"
     ],
     "about": "Baan Suan Lodge เป็นที่พักแบบบ้านเรือนไทยสมัยใหม่ ตั้งอยู่ท่ามกลางสวนสวยอันเขียวชอุ่ม ออกแบบมาเพื่อให้ผู้มาพักได้นั่งพักผ่อน ใจสบาย และอยู่ใกล้ชิดกับธรรมชาติ ทีมงานพร้อมให้บริการด้วยใจ"
+  },
+  {
+    "name": "x-template-next-012",
+    "url": "https://ex2-axon.github.io/x-template-next-012/",
+    "image": "/x-template-next-012.avif",
+    "type": "lodging",
+    "tagline": "สะอาด เรียบง่าย ใจกลางเมือง",
+    "about": "City Inn Minimal เป็นที่พักสุนทรีย์ที่ยึดหลักการน้อยคือมาก ห้องพักสะอาด พื้นที่พักผ่อนขนาดกะทัดรัด ที่ตั้งสะดวกใจกลางเมืองใกล้จุดท่องเที่ยวหลัก",
+    "rooms": [
+      {
+        "name": "Standard Room",
+        "description": "ห้องพักมาตรฐานสำหรับผู้ที่ต้องการราคาประหยัด",
+        "amenities": [
+          "เตียงเดี่ยว",
+          "แอร์",
+          "ห้องน้ำส่วนตัว",
+          "Wi-Fi ฟรี"
+        ],
+        "pricePerNight": 790,
+        "priceCurrency": "บาท"
+      },
+      {
+        "name": "Deluxe Room",
+        "description": "ห้องพักที่มีสิ่งอำนวยความสะดวกเพิ่มเติม เหมาะสำหรับผู้ที่ต้องการความสำรวจ",
+        "amenities": [
+          "เตียงควีนไซส์",
+          "แอร์",
+          "ห้องน้ำแบบฝักบัว",
+          "Wi-Fi ฟรี",
+          "ตู้เย็น"
+        ],
+        "pricePerNight": 990,
+        "priceCurrency": "บาท"
+      },
+      {
+        "name": "Twin Room",
+        "description": "ห้องพักที่มีเตียงเดี่ยว 2 เตียง เหมาะสำหรับเพื่อนหรือครอบครัวเล็ก",
+        "amenities": [
+          "เตียงเดี่ยว 2 เตียง",
+          "แอร์",
+          "ห้องน้ำส่วนตัว",
+          "Wi-Fi ฟรี",
+          "โทรทัศน์ระบบ Smart"
+        ],
+        "pricePerNight": 1290,
+        "priceCurrency": "บาท"
+      }
+    ],
+    "facilities": [
+      {
+        "name": "Wi-Fi",
+        "icon": "wifi"
+      },
+      {
+        "name": "ที่จอดรถ",
+        "icon": "parking"
+      },
+      {
+        "name": "แอร์",
+        "icon": "ac"
+      },
+      {
+        "name": "ห้องน้ำส่วนตัว",
+        "icon": "bathroom"
+      },
+      {
+        "name": "น้ำร้อน",
+        "icon": "hot-water"
+      },
+      {
+        "name": "โทรทัศน์",
+        "icon": "tv"
+      },
+      {
+        "name": "ลิฟต์",
+        "icon": "elevator"
+      }
+    ],
+    "location": {
+      "address": "456 ถ.สีลม แขวงสีลม เขตบางรัก กรุงเทพฯ 10500",
+      "directions": "เข้าจากถนนสีลม ไปทางตะวันตก ห้องพักอยู่บนเนื้อที่มุมซอย",
+      "googleMapsUrl": "https://maps.google.com/?q=13.7307,100.5316"
+    },
+    "contact": {
+      "phone": "+66-2-234-5678",
+      "lineId": "cityinnminimal",
+      "lineUrl": "https://line.me/R/ti/p/@cityinnminimal"
+    },
+    "gallery": [
+      "/gallery/x-template-next-012-1.avif",
+      "/gallery/x-template-next-012-2.avif",
+      "/gallery/x-template-next-012-3.avif",
+      "/gallery/x-template-next-012-4.avif",
+      "/gallery/x-template-next-012-5.avif",
+      "/gallery/x-template-next-012-6.avif",
+      "/gallery/x-template-next-012-7.avif",
+      "/gallery/x-template-next-012-8.avif"
+    ]
   }
 ]
