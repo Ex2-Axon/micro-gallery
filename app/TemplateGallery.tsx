@@ -104,6 +104,12 @@ export default function TemplateGallery({ initialTemplates }: TemplateGalleryPro
                   </div>
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
+                {template.type === "lodging" && (
+                  <div className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 text-xs font-semibold text-slate-900 shadow-sm backdrop-blur-sm">
+                    <span>🏨</span>
+                    <span>ที่พัก</span>
+                  </div>
+                )}
               </div>
               <div className="space-y-3 p-6">
                 <div>
@@ -153,11 +159,10 @@ export default function TemplateGallery({ initialTemplates }: TemplateGalleryPro
               onClick={() => setPage(pageNumber)}
               aria-current={currentPage === pageNumber ? "page" : undefined}
               aria-label={`หน้า ${pageNumber}`}
-              className={`h-10 min-w-10 rounded-xl border px-3 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 ${
-                currentPage === pageNumber
+              className={`h-10 min-w-10 rounded-xl border px-3 text-sm font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 ${currentPage === pageNumber
                   ? "border-slate-900 bg-slate-900 text-white"
                   : "border-slate-200 bg-white text-slate-700 hover:bg-slate-100"
-              }`}
+                }`}
             >
               {pageNumber}
             </button>
