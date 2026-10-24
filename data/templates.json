@@ -313,5 +313,83 @@
     "name": "x-template-special-010",
     "url": "https://ex2-axon.github.io/x-template-special-010/",
     "image": "/x-template-special-010_20260603_152839.png"
+  },
+  {
+    "name": "x-template-next-011",
+    "url": "https://ex2-axon.github.io/x-template-next-011/",
+    "image": "/x-template-next-011.avif",
+    "type": "lodging",
+    "tagline": "พักผ่อนท่ามกลางธรรมชาติ กลับมาพักใจให้สดชื่น",
+    "rooms": [
+      {
+        "name": "Garden View Room",
+        "description": "ห้องพักที่ออกเชิงสวนสวย พบได้กับเสียงนกและธรรมชาติ",
+        "amenities": [
+          "เตียงควีนไซส์",
+          "แอร์",
+          "ห้องน้ำส่วนตัว",
+          "Wi-Fi ฟรี",
+          "ระเบียงส่วนตัว"
+        ],
+        "price": "เริ่มต้น 1,290 บาท/คืน"
+      },
+      {
+        "name": "Balcony Suite",
+        "description": "ห้องหลักชั้นที่มีระเบียงขนาดใหญ่ เหมาะสำหรับพักผ่อนยาวนาน",
+        "amenities": [
+          "เตียงควีนไซส์",
+          "โซฟา",
+          "แอร์",
+          "ห้องน้ำแบบฝักบัว",
+          "Wi-Fi ฟรี",
+          "ระเบียงกว้าง"
+        ],
+        "price": "เริ่มต้น 1,890 บาท/คืน"
+      },
+      {
+        "name": "Family Cottage",
+        "description": "บ้านเล็กสำหรับครอบครัว มี 2 ห้องนอนและห้องนั่งเล่น",
+        "amenities": [
+          "เตียงดับเบิล 2 ตัว",
+          "โซฟา",
+          "แอร์",
+          "ห้องน้ำ 2 ห้อง",
+          "ครัวเล็ก",
+          "Wi-Fi ฟรี",
+          "ระเบียง"
+        ],
+        "price": "เริ่มต้น 2,490 บาท/คืน"
+      }
+    ],
+    "facilities": [
+      "Wi-Fi ฟรี",
+      "ที่จอดรถ",
+      "อาหารเช้าแบบไทย-ตะวันตก",
+      "สวนส่วนตัว",
+      "ระเบียง/ชานพัก",
+      "น้ำดื่มฟรี"
+    ],
+    "location": {
+      "address": "123 หมู่ 5 ต.บ้านสวน อ.เมือง จ.เชียงใหม่ 50000",
+      "directions": "เข้าจากถนนหลวง 107 ตรงไปยังหมู่บ้าน ตามป้ายชี้ทาง",
+      "mapsLink": "https://maps.google.com/?q=18.7883,98.9853"
+    },
+    "contact": {
+      "phone": "081-234-5678",
+      "lineId": "baansuannature"
+    },
+    "gallery": [
+      "/gallery/x-template-next-011-01.avif",
+      "/gallery/x-template-next-011-02.avif",
+      "/gallery/x-template-next-011-03.avif",
+      "/gallery/x-template-next-011-04.avif",
+      "/gallery/x-template-next-011-05.avif",
+      "/gallery/x-template-next-011-06.avif",
+      "/gallery/x-template-next-011-07.avif",
+      "/gallery/x-template-next-011-08.avif",
+      "/gallery/x-template-next-011-09.avif",
+      "/gallery/x-template-next-011-10.avif"
+    ],
+    "about": "Baan Suan Lodge เป็นที่พักแบบบ้านเรือนไทยสมัยใหม่ ตั้งอยู่ท่ามกลางสวนสวยอันเขียวชอุ่ม ออกแบบมาเพื่อให้ผู้มาพักได้นั่งพักผ่อน ใจสบาย และอยู่ใกล้ชิดกับธรรมชาติ ทีมงานพร้อมให้บริการด้วยใจ"
   }
 ]

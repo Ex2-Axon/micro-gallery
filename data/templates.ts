@@ -2,10 +2,36 @@ import { readdirSync } from "node:fs";
 import { join } from "node:path";
 import configuredTemplates from "./templates.json";
 
+export interface Room {
+  name: string;
+  description: string;
+  amenities: string[];
+  price: string;
+}
+
+export interface LodgingLocation {
+  address: string;
+  directions?: string;
+  mapsLink: string;
+}
+
+export interface LodgingContact {
+  phone: string;
+  lineId: string;
+}
+
 export interface Template {
   name: string;
   url: string;
   image: string;
+  type?: "general" | "lodging";
+  tagline?: string;
+  rooms?: Room[];
+  facilities?: string[];
+  location?: LodgingLocation;
+  contact?: LodgingContact;
+  gallery?: string[];
+  about?: string;
 }
 
 const supportedExtensions = new Set(["avif", "webp", "png", "jpg", "jpeg"]);
@@ -35,7 +61,7 @@ const discoveredImages = readdirSync(publicDirectory)
   .sort(
     (left, right) =>
       (extensionPriority.get(left.extension) ?? Number.MAX_SAFE_INTEGER) -
-        (extensionPriority.get(right.extension) ?? Number.MAX_SAFE_INTEGER) ||
+      (extensionPriority.get(right.extension) ?? Number.MAX_SAFE_INTEGER) ||
       left.filename.localeCompare(right.filename),
   );
 
@@ -54,7 +80,7 @@ for (const image of discoveredImages) {
 const configuredNames = new Set(configuredTemplates.map((template) => template.name));
 
 export const templates: Template[] = [
-  ...configuredTemplates,
+  ...(configuredTemplates as Template[]),
   ...Array.from(discoveredTemplates.values()).filter(
     (template) => !configuredNames.has(template.name),
   ),
