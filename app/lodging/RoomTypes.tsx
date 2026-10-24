@@ -25,10 +25,10 @@ export default function RoomTypes({ rooms }: RoomTypesProps) {
               className="overflow-hidden rounded-2xl border border-slate-200 bg-gradient-to-br from-slate-50 to-slate-100 shadow-sm transition hover:shadow-lg"
             >
               {/* Room image placeholder */}
-              <div className="relative h-48 w-full bg-gradient-to-br from-emerald-200 via-green-100 to-stone-100">
+              <div className="relative h-48 w-full bg-gradient-to-br from-gray-200 via-gray-100 to-slate-100">
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-emerald-600 opacity-30">
+                    <div className="text-4xl font-bold text-gray-600 opacity-30">
                       🛏️
                     </div>
                   </div>
@@ -50,7 +50,7 @@ export default function RoomTypes({ rooms }: RoomTypesProps) {
                   <ul className="space-y-1 text-sm text-slate-700">
                     {room.amenities.slice(0, 4).map((amenity, idx) => (
                       <li key={idx} className="flex items-center gap-2">
-                        <span className="inline-block h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+                        <span className="inline-block h-1.5 w-1.5 rounded-full bg-gray-900"></span>
                         {amenity}
                       </li>
                     ))}
@@ -73,7 +73,7 @@ export default function RoomTypes({ rooms }: RoomTypesProps) {
                 {/* CTA Button */}
                 <Link
                   href="#contact"
-                  className="mt-6 flex w-full items-center justify-center rounded-lg bg-emerald-600 px-4 py-3 font-semibold text-white transition hover:bg-emerald-700 active:scale-95"
+                  className="mt-6 flex w-full items-center justify-center rounded-lg bg-gray-900 px-4 py-3 font-semibold text-white transition hover:bg-gray-800 active:scale-95"
                 >
                   สอบถามห้องนี้
                 </Link>

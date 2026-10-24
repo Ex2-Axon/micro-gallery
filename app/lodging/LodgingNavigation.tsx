@@ -34,7 +34,7 @@ export default function LodgingNavigation({ lodgeName }: LodgingNavigationProps)
         {/* Logo/Name */}
         <Link
           href="#"
-          className="flex items-center gap-2 text-xl font-bold tracking-tight text-emerald-600 transition hover:text-emerald-700"
+          className="flex items-center gap-2 text-xl font-bold tracking-tight text-gray-900 transition hover:text-gray-700"
         >
           <span className="text-2xl">🏡</span>
           <span className="hidden sm:inline">{lodgeName}</span>
@@ -46,7 +46,7 @@ export default function LodgingNavigation({ lodgeName }: LodgingNavigationProps)
             <button
               key={link.href}
               onClick={() => handleNavClick(link.href)}
-              className="text-sm font-medium text-slate-700 transition hover:text-emerald-600"
+              className="text-sm font-medium text-slate-700 transition hover:text-gray-900"
             >
               {link.label}
             </button>
@@ -57,7 +57,7 @@ export default function LodgingNavigation({ lodgeName }: LodgingNavigationProps)
         <div className="hidden md:flex gap-3">
           <button
             onClick={() => handleNavClick("#contact")}
-            className="rounded-lg bg-emerald-600 px-5 py-2 text-sm font-semibold text-white transition hover:bg-emerald-700 active:scale-95"
+            className="rounded-lg bg-gray-900 px-5 py-2 text-sm font-semibold text-white transition hover:bg-gray-800 active:scale-95"
           >
             สอบถาม
           </button>
@@ -67,7 +67,7 @@ export default function LodgingNavigation({ lodgeName }: LodgingNavigationProps)
         <div className="flex md:hidden items-center gap-3">
           <button
             onClick={() => handleNavClick("#contact")}
-            className="rounded-lg bg-emerald-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-emerald-700"
+            className="rounded-lg bg-gray-900 px-4 py-2 text-sm font-semibold text-white transition hover:bg-gray-800"
           >
             สอบถาม
           </button>
@@ -110,7 +110,7 @@ export default function LodgingNavigation({ lodgeName }: LodgingNavigationProps)
               <button
                 key={link.href}
                 onClick={() => handleNavClick(link.href)}
-                className="block w-full px-3 py-2 text-left text-sm font-medium text-slate-700 hover:bg-emerald-50 hover:text-emerald-600 rounded-lg transition"
+                className="block w-full px-3 py-2 text-left text-sm font-medium text-slate-700 hover:bg-gray-50 hover:text-gray-900 rounded-lg transition"
               >
                 {link.label}
               </button>

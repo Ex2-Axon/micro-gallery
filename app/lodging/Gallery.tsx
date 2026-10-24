@@ -6,18 +6,18 @@ interface GalleryProps {
 
 function GalleryPlaceholder({ index }: { index: number }) {
   const gradients = [
-    "from-emerald-300 via-green-200 to-stone-100",
-    "from-amber-200 via-yellow-100 to-orange-100",
-    "from-rose-200 via-pink-100 to-amber-50",
-    "from-cyan-200 via-blue-100 to-emerald-100",
-    "from-purple-200 via-pink-100 to-rose-100",
-    "from-orange-200 via-yellow-100 to-lime-100",
-    "from-green-300 via-emerald-200 to-cyan-100",
-    "from-indigo-200 via-purple-100 to-pink-100",
-    "from-teal-200 via-green-100 to-blue-100",
-    "from-lime-200 via-yellow-100 to-amber-100",
-    "from-pink-200 via-rose-100 to-orange-100",
-    "from-blue-200 via-cyan-100 to-teal-100",
+    "from-gray-300 via-gray-200 to-slate-100",
+    "from-gray-200 via-gray-100 to-slate-50",
+    "from-slate-200 via-gray-100 to-gray-50",
+    "from-gray-300 via-slate-200 to-gray-100",
+    "from-slate-300 via-gray-200 to-gray-50",
+    "from-gray-400 via-gray-300 to-slate-200",
+    "from-gray-300 via-gray-200 to-gray-100",
+    "from-slate-400 via-gray-300 to-gray-200",
+    "from-gray-300 via-slate-200 to-gray-100",
+    "from-gray-400 via-gray-200 to-slate-100",
+    "from-slate-300 via-gray-200 to-gray-100",
+    "from-gray-400 via-slate-300 to-gray-200",
   ];
 
   const gradient = gradients[index % gradients.length];

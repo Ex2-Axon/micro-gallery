@@ -39,7 +39,6 @@ export interface Template {
   location?: LodgingLocation;
   contact?: LodgingContact;
   gallery?: string[];
-  heroImage?: string;
 }
 
 const supportedExtensions = new Set(["avif", "webp", "png", "jpg", "jpeg"]);

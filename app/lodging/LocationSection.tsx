@@ -11,7 +11,7 @@ export default function LocationSection({ location }: LocationSectionProps) {
       <div className="mx-auto max-w-7xl">
         <div className="grid gap-8 lg:grid-cols-2">
           {/* Map placeholder */}
-          <div className="flex items-center justify-center rounded-2xl border border-slate-200 bg-gradient-to-br from-blue-100 via-cyan-50 to-emerald-50 p-8 shadow-sm">
+          <div className="flex items-center justify-center rounded-2xl border border-slate-200 bg-gradient-to-br from-gray-100 via-gray-50 to-slate-100 p-8 shadow-sm">
             <div className="text-center">
               <div className="text-6xl">🗺️</div>
               <p className="mt-4 text-slate-600">แผนที่ทำเลที่ตั้ง</p>
@@ -49,7 +49,7 @@ export default function LocationSection({ location }: LocationSectionProps) {
                   href={location.googleMapsUrl}
                   target="_blank"
                   rel="noreferrer"
-                  className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white transition hover:bg-blue-700 active:scale-95"
+                  className="inline-flex items-center gap-2 rounded-lg bg-gray-900 px-6 py-3 font-semibold text-white transition hover:bg-gray-800 active:scale-95"
                 >
                   <span>ดูบนแผนที่</span>
                   <svg

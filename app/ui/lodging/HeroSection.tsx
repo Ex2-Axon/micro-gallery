@@ -6,8 +6,7 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({ template }: HeroSectionProps) {
-  const heroImage = template.heroImage || template.image;
-  const heroImageUrl = heroImage || "/placeholder.jpg";
+  const heroImageUrl = template.image || "/placeholder.jpg";
 
   return (
     <section id="home" className="relative w-full overflow-hidden">

@@ -7,7 +7,7 @@ interface ContactSectionProps {
 
 export default function ContactSection({ contact }: ContactSectionProps) {
   return (
-    <section id="contact" className="bg-gradient-to-b from-emerald-50 to-green-50 px-4 py-16 sm:py-24 lg:py-32">
+    <section id="contact" className="bg-gradient-to-b from-gray-50 to-white px-4 py-16 sm:py-24 lg:py-32">
       <div className="mx-auto max-w-7xl">
         <div className="mb-12 text-center">
           <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl lg:text-5xl">
@@ -21,9 +21,9 @@ export default function ContactSection({ contact }: ContactSectionProps) {
         <div className="mx-auto max-w-2xl">
           <div className="space-y-8">
             {/* Phone section */}
-            <div className="rounded-2xl border border-emerald-200 bg-white p-8 shadow-sm">
+            <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-emerald-100">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-gray-100">
                   <span className="text-2xl">📞</span>
                 </div>
                 <div className="flex-1">
@@ -31,7 +31,7 @@ export default function ContactSection({ contact }: ContactSectionProps) {
                   <p className="mt-2 text-slate-600">{contact.phone}</p>
                   <Link
                     href={`tel:${contact.phone}`}
-                    className="mt-4 inline-flex items-center gap-2 rounded-lg bg-emerald-600 px-6 py-3 font-semibold text-white transition hover:bg-emerald-700 active:scale-95"
+                    className="mt-4 inline-flex items-center gap-2 rounded-lg bg-gray-900 px-6 py-3 font-semibold text-white transition hover:bg-gray-800 active:scale-95"
                   >
                     <span>โทรเลย</span>
                     <svg
@@ -53,9 +53,9 @@ export default function ContactSection({ contact }: ContactSectionProps) {
             </div>
 
             {/* LINE section */}
-            <div className="rounded-2xl border border-emerald-200 bg-white p-8 shadow-sm">
+            <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
               <div className="flex items-start gap-4">
-                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-emerald-100">
+                <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-lg bg-gray-100">
                   <span className="text-2xl">💬</span>
                 </div>
                 <div className="flex-1">
@@ -65,7 +65,7 @@ export default function ContactSection({ contact }: ContactSectionProps) {
                     href={contact.lineUrl}
                     target="_blank"
                     rel="noreferrer"
-                    className="mt-4 inline-flex items-center gap-2 rounded-lg bg-green-500 px-6 py-3 font-semibold text-white transition hover:bg-green-600 active:scale-95"
+                    className="mt-4 inline-flex items-center gap-2 rounded-lg bg-gray-800 px-6 py-3 font-semibold text-white transition hover:bg-gray-700 active:scale-95"
                   >
                     <span>แอด LINE</span>
                     <svg
@@ -87,8 +87,8 @@ export default function ContactSection({ contact }: ContactSectionProps) {
             </div>
 
             {/* Disclaimer */}
-            <div className="rounded-2xl border border-amber-200 bg-amber-50 p-6">
-              <p className="text-sm leading-relaxed text-amber-900">
+            <div className="rounded-2xl border border-gray-300 bg-gray-100 p-6">
+              <p className="text-sm leading-relaxed text-gray-900">
                 <span className="font-semibold">⚠️ หมายเหตุ:</span> ไม่ใช่ระบบจองออนไลน์ สามารถสอบถามได้ทางโทรศัพท์หรือ LINE เท่านั้น
               </p>
             </div>

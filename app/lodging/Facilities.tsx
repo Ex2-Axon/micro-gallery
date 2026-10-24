@@ -16,7 +16,7 @@ function FacilityIcon({ type }: { type: Facility["icon"] }) {
   };
 
   return (
-    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-100 to-green-100">
+    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-gray-100 to-gray-200">
       <span className="text-xl">{iconMap[type] || "✨"}</span>
     </div>
   );

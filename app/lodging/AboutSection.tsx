@@ -13,14 +13,14 @@ export default function AboutSection({ about, lodgeName }: AboutSectionProps) {
           </h2>
         </div>
 
-        <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-emerald-50 to-green-50 p-8 shadow-sm sm:p-12">
+        <div className="rounded-2xl border border-slate-200 bg-gradient-to-br from-gray-50 to-slate-100 p-8 shadow-sm sm:p-12">
           <p className="text-lg leading-relaxed text-slate-700 sm:text-xl">
             {about}
           </p>
 
           <div className="mt-8 grid gap-6 sm:grid-cols-3">
             <div className="text-center">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-100 mx-auto">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gray-200 mx-auto">
                 <span className="text-2xl">🌿</span>
               </div>
               <p className="mt-3 font-semibold text-slate-900">ธรรมชาติ</p>
@@ -28,7 +28,7 @@ export default function AboutSection({ about, lodgeName }: AboutSectionProps) {
             </div>
 
             <div className="text-center">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-100 mx-auto">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gray-200 mx-auto">
                 <span className="text-2xl">😌</span>
               </div>
               <p className="mt-3 font-semibold text-slate-900">สะดวกสบาย</p>
@@ -36,7 +36,7 @@ export default function AboutSection({ about, lodgeName }: AboutSectionProps) {
             </div>
 
             <div className="text-center">
-              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-100 mx-auto">
+              <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gray-200 mx-auto">
                 <span className="text-2xl">🧘</span>
               </div>
               <p className="mt-3 font-semibold text-slate-900">ผ่อนคลาย</p>
