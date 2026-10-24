@@ -7,7 +7,7 @@ import RoomTypes from "./RoomTypes";
 import Facilities from "./Facilities";
 import LocationSection from "./LocationSection";
 import ContactSection from "./ContactSection";
-import Footer from "../ui/Footer";
+import Footer from "@/app/ui/Footer";
 
 interface LodgingLayoutProps {
   template: Template;
