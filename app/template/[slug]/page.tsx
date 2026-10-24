@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { templates } from "../../../data/templates";
 import { PAYMENT_URL, PRICE, PRICE_FORMATTER } from "../../../data/config";
 import Footer from "../../ui/Footer";
+import LodgingLayout from "../../lodging/LodgingLayout";
 
 export function generateStaticParams() {
   return templates.map((template) => ({ slug: template.name }));
@@ -36,6 +37,11 @@ export default async function TemplatePage({ params }: { params: Promise<{ slug:
     notFound();
   }
 
+  // Conditional rendering for lodging templates
+  if (template.type === "lodging") {
+    return <LodgingLayout template={template} />;
+  }
+
   return (
     <div className="min-h-screen bg-slate-50 text-slate-900">
       <main id="main-content" className="mx-auto flex min-h-screen max-w-7xl flex-col px-4 py-8 sm:px-6 lg:px-8">
@@ -45,7 +51,7 @@ export default async function TemplatePage({ params }: { params: Promise<{ slug:
             href="/"
             className="group flex items-center gap-2 text-sm font-medium text-slate-600 transition hover:text-slate-900"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:-translate-x-1"><path d="m15 18-6-6 6-6"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:-translate-x-1"><path d="m15 18-6-6 6-6" /></svg>
             กลับสู่หน้าหลัก
           </Link>
           <div className="flex gap-3">
@@ -91,7 +97,7 @@ export default async function TemplatePage({ params }: { params: Promise<{ slug:
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900">
                 {template?.name}
               </h1>
-              
+
               <div className="mt-8 space-y-6">
                 <div className="rounded-2xl bg-slate-50 p-6">
                   <p className="text-sm font-medium text-slate-500">ราคาเริ่มต้น</p>

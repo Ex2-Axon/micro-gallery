@@ -3,11 +3,22 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  /* Lodging theme - natural, warm Baan Suan Lodge colors */
+  --color-lodge-primary: #6b9f7f;
+  --color-lodge-secondary: #a4845a;
+  --color-lodge-accent: #d4c5a9;
+  --color-lodge-warm: #faf8f3;
+  --color-lodge-text: #3d5147;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-lodge-primary: var(--color-lodge-primary);
+  --color-lodge-secondary: var(--color-lodge-secondary);
+  --color-lodge-accent: var(--color-lodge-accent);
+  --color-lodge-warm: var(--color-lodge-warm);
+  --color-lodge-text: var(--color-lodge-text);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }

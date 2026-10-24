@@ -331,7 +331,9 @@
           "Wi-Fi ฟรี",
           "ระเบียงส่วนตัว"
         ],
-        "price": "เริ่มต้น 1,290 บาท/คืน"
+        "price": "เริ่มต้น 1,290 บาท/คืน",
+        "pricePerNight": 1290,
+        "priceCurrency": "บาท"
       },
       {
         "name": "Balcony Suite",
@@ -344,7 +346,9 @@
           "Wi-Fi ฟรี",
           "ระเบียงกว้าง"
         ],
-        "price": "เริ่มต้น 1,890 บาท/คืน"
+        "price": "เริ่มต้น 1,890 บาท/คืน",
+        "pricePerNight": 1890,
+        "priceCurrency": "บาท"
       },
       {
         "name": "Family Cottage",
@@ -358,7 +362,9 @@
           "Wi-Fi ฟรี",
           "ระเบียง"
         ],
-        "price": "เริ่มต้น 2,490 บาท/คืน"
+        "price": "เริ่มต้น 2,490 บาท/คืน",
+        "pricePerNight": 2490,
+        "priceCurrency": "บาท"
       }
     ],
     "facilities": [
@@ -372,11 +378,12 @@
     "location": {
       "address": "123 หมู่ 5 ต.บ้านสวน อ.เมือง จ.เชียงใหม่ 50000",
       "directions": "เข้าจากถนนหลวง 107 ตรงไปยังหมู่บ้าน ตามป้ายชี้ทาง",
-      "mapsLink": "https://maps.google.com/?q=18.7883,98.9853"
+      "googleMapsUrl": "https://maps.google.com/?q=18.7883,98.9853"
     },
     "contact": {
       "phone": "081-234-5678",
-      "lineId": "baansuannature"
+      "lineId": "baansuannature",
+      "lineUrl": "https://line.me/R/ti/p/~baansuannature"
     },
     "gallery": [
       "/gallery/x-template-next-011-01.avif",
