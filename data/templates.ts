@@ -10,11 +10,6 @@ export interface Room {
   priceCurrency: "บาท";
 }
 
-export interface Facility {
-  name: string;
-  icon: "wifi" | "parking" | "ac" | "bathroom" | "hot-water" | "tv" | "elevator";
-}
-
 export interface LodgingLocation {
   address: string;
   directions?: string;
@@ -35,7 +30,7 @@ export interface Template {
   tagline?: string;
   about?: string;
   rooms?: Room[];
-  facilities?: Facility[];
+  facilities?: string[];
   location?: LodgingLocation;
   contact?: LodgingContact;
   gallery?: string[];

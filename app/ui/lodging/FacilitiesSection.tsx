@@ -1,8 +1,7 @@
-import type { Facility } from "@/data/templates";
 import FacilityIcon from "./FacilityIcon";
 
 interface FacilitiesSectionProps {
-  facilities: Facility[];
+  facilities: string[];
 }
 
 export default function FacilitiesSection({
@@ -23,7 +22,7 @@ export default function FacilitiesSection({
 
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {facilities.map((facility, index) => (
-          <FacilityIcon key={index} facility={facility} />
+          <FacilityIcon key={index} facilityName={facility} />
         ))}
       </div>
     </section>

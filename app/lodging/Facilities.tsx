@@ -1,23 +1,24 @@
-import type { Facility } from "../../data/templates";
-
 interface FacilitiesProps {
-  facilities: Facility[];
+  facilities: string[];
 }
 
-function FacilityIcon({ type }: { type: Facility["icon"] }) {
-  const iconMap: Record<Facility["icon"], string> = {
-    wifi: "📶",
-    parking: "🅿️",
-    ac: "❄️",
-    bathroom: "🚿",
-    "hot-water": "🚰",
-    tv: "📺",
-    elevator: "🛗",
+function FacilityIcon({ name }: { name: string }) {
+  const iconMap: Record<string, string> = {
+    "Wi-Fi ฟรี": "📶",
+    "ที่จอดรถ": "🅿️",
+    "แอร์": "❄️",
+    "ห้องน้ำ": "🚿",
+    "อาหารเช้า": "🍳",
+    "ระเบียง": "🏞️",
+    "น้ำดื่มฟรี": "💧",
+    "สวนส่วนตัว": "🌿",
+    "ทีวี": "📺",
+    "ลิฟต์": "🛗",
   };
 
   return (
-    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-gray-100 to-gray-200">
-      <span className="text-xl">{iconMap[type] || "✨"}</span>
+    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-emerald-100 to-green-100">
+      <span className="text-xl">{iconMap[name] || "✨"}</span>
     </div>
   );
 }
@@ -41,9 +42,9 @@ export default function Facilities({ facilities }: FacilitiesProps) {
               key={index}
               className="flex items-start gap-4 rounded-xl border border-slate-200 bg-white p-6 shadow-sm transition hover:shadow-md"
             >
-              <FacilityIcon type={facility.icon} />
+              <FacilityIcon name={facility} />
               <div className="flex-1">
-                <h3 className="font-semibold text-slate-900">{facility.name}</h3>
+                <h3 className="font-semibold text-slate-900">{facility}</h3>
               </div>
             </div>
           ))}
