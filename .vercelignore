@@ -1,0 +1,4 @@
+# Local-only template registration tools are kept in GitHub but not uploaded to Vercel.
+python-tools/
+run_template_registrar.py
+.vscode/

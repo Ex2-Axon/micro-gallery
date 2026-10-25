@@ -140,10 +140,69 @@ export default async function TemplatePage({ params }: { params: Promise<{ slug:
                 <div className="space-y-2">
                   <h2 className="text-sm font-bold uppercase tracking-wider text-text-primary">ข้อมูลเทมเพลต</h2>
                   <p className="text-sm leading-6 text-text-secondary">
-                    เทคโนโลยี ฟีเจอร์ ใบอนุญาต และขอบเขตการปรับแต่งอาจแตกต่างกันในแต่ละรายการ
-                    โปรดตรวจสอบข้อมูลจากหน้าเดโมและยืนยันรายละเอียดก่อนสั่งซื้อ
+                    {template.about ??
+                      "เทคโนโลยี ฟีเจอร์ ใบอนุญาต และขอบเขตการปรับแต่งอาจแตกต่างกันในแต่ละรายการ โปรดตรวจสอบข้อมูลจากหน้าเดโมและยืนยันรายละเอียดก่อนสั่งซื้อ"}
                   </p>
                 </div>
+
+                {(template.frameworkVersion ||
+                  template.languages?.length ||
+                  template.technologies?.length ||
+                  template.database ||
+                  template.sourceRepository ||
+                  template.deploymentPlatform) && (
+                  <dl className="space-y-3 border-t border-border pt-4 text-sm">
+                    {template.frameworkVersion && (
+                      <div>
+                        <dt className="font-semibold text-text-primary">Framework</dt>
+                        <dd className="text-text-secondary">
+                          {template.framework} {template.frameworkVersion}
+                        </dd>
+                      </div>
+                    )}
+                    {template.languages && template.languages.length > 0 && (
+                      <div>
+                        <dt className="font-semibold text-text-primary">ภาษาโปรแกรม</dt>
+                        <dd className="text-text-secondary">{template.languages.join(", ")}</dd>
+                      </div>
+                    )}
+                    {template.technologies && template.technologies.length > 0 && (
+                      <div>
+                        <dt className="font-semibold text-text-primary">Technologies</dt>
+                        <dd className="text-text-secondary">
+                          {template.technologies.join(", ")}
+                        </dd>
+                      </div>
+                    )}
+                    {template.usesDatabase && template.database && (
+                      <div>
+                        <dt className="font-semibold text-text-primary">ฐานข้อมูล</dt>
+                        <dd className="text-text-secondary">{template.database}</dd>
+                      </div>
+                    )}
+                    {template.deploymentPlatform && (
+                      <div>
+                        <dt className="font-semibold text-text-primary">Deployment</dt>
+                        <dd className="text-text-secondary">{template.deploymentPlatform}</dd>
+                      </div>
+                    )}
+                    {template.sourceRepository && (
+                      <div>
+                        <dt className="font-semibold text-text-primary">Source repository</dt>
+                        <dd>
+                          <a
+                            href={template.sourceRepository}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="break-all text-sky-600 hover:underline"
+                          >
+                            {template.sourceRepository}
+                          </a>
+                        </dd>
+                      </div>
+                    )}
+                  </dl>
+                )}
 
                 <div className="pt-4">
                   <p className="text-xs font-bold uppercase tracking-[0.15em] text-gray-400">Demo URL</p>

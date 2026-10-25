@@ -23,12 +23,26 @@ export interface LodgingContact {
   lineUrl: string;
 }
 
+export interface TemplateBadge {
+  label: string;
+  url: string;
+}
+
 export interface Template {
   name: string;
   url: string;
   image: string;
   framework: "Next.js" | "Vite";
+  frameworkVersion?: string;
+  languages?: string[];
+  technologies?: string[];
+  database?: string;
+  sourceRepository?: string;
+  deploymentPlatform?: string;
+  deployedUrl?: string;
+  badges?: TemplateBadge[];
   salePrice: number;
+  salePriceCurrency?: "THB";
   usesDatabase: boolean;
   type?: "general" | "lodging";
   tagline?: string;

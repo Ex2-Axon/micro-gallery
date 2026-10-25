@@ -117,8 +117,23 @@ export default function TemplateGallery({ initialTemplates }: TemplateGalleryPro
                   <h2 className="mt-2 text-2xl font-bold text-text-primary">{template.name}</h2>
                 </div>
                 <p className="text-sm leading-6 text-text-secondary line-clamp-2">
-                  คลิกเพื่อดูรายละเอียดและลิงก์เดโมของเทมเพลตนี้
+                  {template.about ?? "คลิกเพื่อดูรายละเอียดและลิงก์เดโมของเทมเพลตนี้"}
                 </p>
+                {template.badges && template.badges.length > 0 && (
+                  <div className="flex flex-wrap gap-2" aria-label="เทคโนโลยีที่ใช้">
+                    {template.badges.map((badge) => (
+                      <Image
+                        key={`${template.name}-${badge.label}`}
+                        src={badge.url}
+                        alt={badge.label}
+                        width={120}
+                        height={24}
+                        unoptimized
+                        className="h-6 w-auto"
+                      />
+                    ))}
+                  </div>
+                )}
                 <div className="flex items-center justify-between pt-2">
                   <span className="text-xs font-bold uppercase tracking-wider text-gray-400">ราคา</span>
                   <span className="text-lg font-bold text-text-primary">{PRICE_FORMATTER.format(template.salePrice)} ฿</span>
