@@ -1,4 +1,9 @@
-export const PRICE = 2500;
+export const TEMPLATE_PRICES = {
+  vite: 2500,
+  next: 3500,
+  special: 5000,
+} as const;
+export const PRICE = TEMPLATE_PRICES.vite;
 export const PRICE_FORMATTER = new Intl.NumberFormat("th-TH");
 export const PRIVACY_POLICY_URL =
   "https://microtronic-thailand.github.io/privacy-policy/?lang=en";

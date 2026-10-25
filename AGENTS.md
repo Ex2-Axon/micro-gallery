@@ -14,8 +14,19 @@ Read this section alongside the general guidance below. When instructions confli
 
 - Automatically discovered images must be directly under `public/` and named `x-template-<number>.<extension>`. Supported extensions are `avif`, `webp`, `png`, `jpg`, and `jpeg`; AVIF is preferred when more than one format exists for a template.
 - Add custom names, special image paths, and/or non-default demo URLs as entries in `data/templates.json`. The referenced image still needs to exist in `public/`. Explicit entries override discovered entries with the same name.
+- Use these sale-price and database defaults when adding a template: `x-template-special-...` is 5,000 baht and uses a database; otherwise `x-template-next-...` is 3,500 baht with no database; other `x-template-...` entries are 2,500 baht with no database. Apply the special prefix rule before the general `x-template-...` rule. The category does not identify the database product; record its name only after verification.
+- Before publishing a template, provide and verify its metadata: framework/technologies used (including framework version), programming languages, whether it uses a database and which one, source repository, deployment platform and deployed URL, sale price and currency, screenshot image, screenshot path in the project, and a brief description. Store screenshot images under `public/` and record their exact public path (for example, `/x-template-001.png`) in the template metadata. Do not infer or invent missing details; confirm them before publishing the template.
 - Image discovery is performed by the server-side data module during build/rendering, not by a live upload or background watcher. Rebuild/redeploy to publish newly added image assets and generated detail routes.
 - Keep the gallery page size at 12 unless the product requirement changes. Search is over the full template list, while pagination is applied to the filtered results.
+
+## Template technology badges
+
+- Every template card for a template offered for sale must show badges for its actual framework, programming languages, and database (if it uses one). Do not infer a template's stack from the gallery application's own dependencies.
+- Create and standardize badge tags with [Micro-Badged-Tags](https://micro-badged-tags.vercel.app/), then use the badge image URL produced by the service on the card.
+- For framework badges, show the framework name and the version used by that template. Check the template's own package/configuration files for the version; create the badge URL with Micro-Badged-Tags, for example: `![Next.js: 16.4.2](https://micro-badged-tags.vercel.app/badge.svg?text=Next.js%2016.4.2&style=flat)`.
+- For programming languages, use the language's logo badge (for example, `html`, `python`, `typescript`, or `javascript`) rather than a framework badge.
+- Add a database badge only when the template actually uses a database. Use the database logo and a blank label where appropriate; for example: `![Supabase](https://micro-badged-tags.vercel.app/badge.svg?text=Supabase&leftType=icon&left=supabase&leftColor=%23292e2c&textColor=%232563EB&style=flat)`. Do not show a database badge when there is no database.
+- Keep each template's badge metadata with that template's explicit metadata, and render its badges consistently on the template cards.
 
 ## Dependency and validation policy
 

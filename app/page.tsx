@@ -1,23 +1,31 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { templates } from "../data/templates";
 import { PAYMENT_URL, PRICE, PRICE_FORMATTER } from "../data/config";
 import Footer from "./ui/Footer";
+import DailyTemplateHero from "./ui/DailyTemplateHero";
 import TemplateGallery from "./TemplateGallery";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900">
+    <div className="min-h-screen bg-gray-50 text-text-primary">
       <main id="main-content" className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        <div className="mb-10 rounded-[2rem] border border-slate-200 bg-white/95 p-8 shadow-sm shadow-slate-200/50 backdrop-blur-xl">
+        <div className="mb-10 rounded-[2rem] border border-border bg-white/95 p-8 shadow-sm shadow-gray-200/50 backdrop-blur-xl">
           <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-sm uppercase tracking-[0.3em] text-slate-500 font-bold">Axon Template Gallery</p>
-              <h1 className="mt-3 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl">
+              <p className="text-sm uppercase tracking-[0.3em] text-text-secondary font-bold">Axon Template Gallery</p>
+              <h1 className="mt-3 text-4xl font-bold tracking-tight text-text-primary sm:text-5xl">
                 เลือกเทมเพลตที่ใช่สำหรับธุรกิจของคุณ
               </h1>
-              <p className="mt-4 max-w-2xl text-base leading-7 text-slate-600">
+              <p className="mt-4 max-w-2xl text-base leading-7 text-text-secondary">
                 คลิกเพื่อเปิดหน้ารายละเอียดและลิงก์เดโมของแต่ละเทมเพลต ดูราคาและเงื่อนไขการซื้อที่หน้า{" "}
-                <Link href="/pricing" className="font-semibold text-slate-900 underline decoration-slate-300 underline-offset-4 hover:decoration-slate-900">
+                <Link href="/pricing" className="font-semibold text-text-primary underline decoration-gray-300 underline-offset-4 hover:decoration-text-primary">
                   ข้อตกลงและราคา
                 </Link>
               </p>
@@ -27,20 +35,24 @@ export default function Home() {
                 href={PAYMENT_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-slate-600 transition hover:text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900"
+                className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-text-secondary transition hover:text-text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-text-primary"
               >
                 Micro Donate &amp; Payment
               </a>
-              <div className="rounded-full bg-slate-900 px-5 py-3 text-sm font-semibold text-white">
+              <div className="rounded-full bg-text-primary px-5 py-3 text-sm font-semibold text-white">
                 เริ่มต้น: {PRICE_FORMATTER.format(PRICE)} บาท
               </div>
-              <Link href="/pricing" className="text-xs font-medium text-slate-500 hover:text-slate-900">
+              <Link href="/pricing" className="text-xs font-medium text-text-secondary hover:text-text-primary">
                 ดูแพ็กเกจทั้งหมด →
               </Link>
             </div>
           </div>
         </div>
-        
+
+        <div className="mb-10">
+          <DailyTemplateHero templates={templates} />
+        </div>
+
         <section className="mb-8 grid gap-4 sm:grid-cols-2">
           <a
             href="https://ex2-axon.github.io/x-template-html000/"
@@ -84,6 +96,26 @@ export default function Home() {
 
         <TemplateGallery initialTemplates={templates} />
       </main>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: "Axon Template Gallery",
+            url: "https://gallery.microtronic.biz",
+            description:
+              "เลือกดูเทมเพลตเว็บไซต์จาก Axon พร้อมภาพตัวอย่าง รายละเอียด และลิงก์เดโมของแต่ละรายการ",
+            inLanguage: "th-TH",
+            potentialAction: {
+              "@type": "SearchAction",
+              target: "https://gallery.microtronic.biz/?search={search_term_string}",
+              "query-input": "required name=search_term_string",
+            },
+          }),
+        }}
+      />
 
       <Footer />
     </div>

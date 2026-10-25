@@ -26,10 +26,48 @@ test("search opens a template detail route in the same tab", async ({ page }) =>
   await expect(page).toHaveTitle(/x-template-001/);
 });
 
+test("daily featured hero changes screenshots and has spacing before promotions", async ({ page }) => {
+  await page.goto("/");
+
+  const hero = page.getByRole("region", { name: "เทมเพลตเด่นประจำวัน" });
+  await expect(hero).toBeVisible();
+  const heading = hero.getByRole("heading", { level: 2 });
+  const initialTemplate = await heading.textContent();
+
+  await hero.getByRole("button", { name: "ภาพถัดไป" }).click();
+  await expect(heading).not.toHaveText(initialTemplate ?? "");
+
+  const spacing = await page.evaluate(() => {
+    const heroElement = document.querySelector(
+      'section[aria-label="เทมเพลตเด่นประจำวัน"]',
+    );
+    const promotionElement = document.querySelector(
+      'a[aria-label="Download HTML5 Free Template"]',
+    );
+
+    if (!heroElement || !promotionElement) {
+      return null;
+    }
+
+    return {
+      heroBottom: heroElement.getBoundingClientRect().bottom,
+      promotionTop: promotionElement.getBoundingClientRect().top,
+    };
+  });
+
+  if (!spacing) {
+    throw new Error("Hero or free-template promotion was not found on the home page.");
+  }
+
+  expect(spacing.promotionTop - spacing.heroBottom).toBeGreaterThanOrEqual(40);
+});
+
 test("gallery pagination changes the active page", async ({ page }) => {
   await page.goto("/");
 
-  const templateLinks = page.locator('a[href^="/template/"]');
+  const templateLinks = page
+    .getByRole("region", { name: "รายการเทมเพลต" })
+    .locator('a[href^="/template/"]');
   await expect(templateLinks).toHaveCount(12);
   await page.getByRole("button", { name: "หน้า 2" }).click();
 
@@ -42,10 +80,11 @@ test("pricing page includes shared company and legal links", async ({ page }) =>
 
   await expect(page.getByRole("heading", { name: "ราคาเทมเพลต" })).toBeVisible();
   await expect(page.getByText("2,500")).toBeVisible();
+  await expect(page.getByText("3,500")).toBeVisible();
+  await expect(page.getByText("5,000")).toBeVisible();
   await expect(
     page.getByText("ไม่มีบริการซัพพอร์ตหรือบริการหลังการขาย", { exact: true }),
   ).toBeVisible();
-  await expect(page.getByText("5,000")).toHaveCount(0);
   await expect(page.getByRole("link", { name: "Privacy Policy" })).toBeVisible();
   await expect(page.getByRole("link", { name: "Terms of Service" })).toBeVisible();
   await expect(page.getByText("Powered by Microtronic © 2026 Microtronic Co., Ltd.")).toBeVisible();

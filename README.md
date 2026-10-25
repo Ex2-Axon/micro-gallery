@@ -22,6 +22,8 @@ The app currently has no authentication, database, or API-backed content. Templa
 
 `data/templates.json` contains configured entries, including custom/special filenames and metadata. Configured entries take precedence over automatically discovered entries with the same name. Add custom image paths, display names, or demo URLs here; the referenced image must also exist in `public/`.
 
+Template framework, price, and database defaults are assigned by name in `data/templates.ts`: `x-template-special-` entries are Vite templates priced at 5,000 baht and marked as using a database; otherwise, `x-template-next-` entries are Next.js templates priced at 3,500 baht with no database; other `x-template-` entries are Vite templates priced at 2,500 baht with no database. The special prefix is checked first. These rules do not identify a database product; record its verified name before showing a product-specific badge. Add verified framework versions and programming languages to template metadata before showing those badges.
+
 Discovery runs when the server/build loads the data module, not through a file-watching upload service. After adding an image or changing metadata, restart the development server if necessary and rebuild/redeploy to include the change in generated pages. The gallery filters the full list, shows 12 items per page, and lazy-loads gallery thumbnails.
 
 Pricing and shared external links are defined in `data/config.ts`.
@@ -30,6 +32,7 @@ Pricing and shared external links are defined in `data/config.ts`.
 
 - `app/page.tsx` — gallery home page and footer
 - `app/TemplateGallery.tsx` — client-side search, pagination, and thumbnail grid
+- `app/ui/DailyTemplateHero.tsx` — daily featured-template screenshot carousel
 - `app/template/[slug]/page.tsx` — statically generated template details
 - `app/pricing/page.tsx` — pricing and contact information
 - `app/layout.tsx` — root layout, metadata, and locally bundled Next font setup

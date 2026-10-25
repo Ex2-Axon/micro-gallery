@@ -3,7 +3,7 @@
 import { useMemo, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { PRICE, PRICE_FORMATTER } from "../data/config";
+import { PRICE_FORMATTER } from "../data/config";
 import type { Template } from "../data/templates";
 
 interface TemplateGalleryProps {
@@ -40,11 +40,11 @@ export default function TemplateGallery({ initialTemplates }: TemplateGalleryPro
   return (
     <div className="space-y-8">
       {/* Search & Filter Bar */}
-      <div className="sticky top-4 z-10 flex flex-col gap-4 rounded-[2rem] border border-slate-200 bg-white/80 p-4 shadow-sm backdrop-blur-xl sm:flex-row sm:items-center sm:p-6">
+      <div className="sticky top-4 z-10 flex flex-col gap-4 rounded-[2rem] border border-border bg-white/80 p-4 shadow-sm backdrop-blur-xl sm:flex-row sm:items-center sm:p-6">
         <div className="relative flex-1">
           <svg
             aria-hidden="true"
-            className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400"
+            className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-gray-400"
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
@@ -71,10 +71,10 @@ export default function TemplateGallery({ initialTemplates }: TemplateGalleryPro
               setSearch(event.target.value);
               setPage(1);
             }}
-            className="w-full rounded-2xl border-none bg-slate-100 py-3 pl-12 pr-4 text-sm font-medium text-slate-900 placeholder:text-slate-500 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900"
+            className="w-full rounded-2xl border-none bg-gray-100 py-3 pl-12 pr-4 text-sm font-medium text-text-primary placeholder:text-text-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-text-primary"
           />
         </div>
-        <div aria-live="polite" className="flex items-center gap-2 px-2 text-sm font-medium text-slate-500">
+        <div aria-live="polite" className="flex items-center gap-2 px-2 text-sm font-medium text-text-secondary">
           <span>พบ {filteredTemplates.length} รายการ</span>
         </div>
       </div>
@@ -86,9 +86,9 @@ export default function TemplateGallery({ initialTemplates }: TemplateGalleryPro
             <Link
               key={template.name}
               href={`/template/${template.name}`}
-              className="group overflow-hidden rounded-[2rem] border border-slate-200 bg-white transition hover:-translate-y-1 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-900 focus-visible:ring-offset-2"
+              className="group overflow-hidden rounded-[2rem] border border-border bg-white transition hover:-translate-y-1 hover:shadow-xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-text-primary focus-visible:ring-offset-2"
             >
-              <div className="relative h-48 bg-slate-100">
+              <div className="relative h-48 bg-gray-100">
                 {template.image ? (
                   <Image
                     src={template.image}
@@ -99,13 +99,13 @@ export default function TemplateGallery({ initialTemplates }: TemplateGalleryPro
                     className="object-cover transition duration-500 group-hover:scale-110"
                   />
                 ) : (
-                  <div className="flex h-full items-center justify-center text-slate-400">
+                  <div className="flex h-full items-center justify-center text-gray-400">
                     ไม่มีรูปตัวอย่าง
                   </div>
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 transition-opacity group-hover:opacity-100" />
                 {template.type === "lodging" && (
-                  <div className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 text-xs font-semibold text-slate-900 shadow-sm backdrop-blur-sm">
+                  <div className="absolute bottom-3 right-3 inline-flex items-center gap-1.5 rounded-full bg-white/95 px-3 py-1.5 text-xs font-semibold text-text-primary shadow-sm backdrop-blur-sm">
                     <span>🏨</span>
                     <span>ที่พัก</span>
                   </div>
@@ -113,28 +113,28 @@ export default function TemplateGallery({ initialTemplates }: TemplateGalleryPro
               </div>
               <div className="space-y-3 p-6">
                 <div>
-                  <p className="text-xs uppercase tracking-[0.24em] text-slate-400 font-bold">Template</p>
-                  <h2 className="mt-2 text-2xl font-bold text-slate-900">{template.name}</h2>
+                  <p className="text-xs uppercase tracking-[0.24em] text-gray-400 font-bold">Template</p>
+                  <h2 className="mt-2 text-2xl font-bold text-text-primary">{template.name}</h2>
                 </div>
-                <p className="text-sm leading-6 text-slate-600 line-clamp-2">
+                <p className="text-sm leading-6 text-text-secondary line-clamp-2">
                   คลิกเพื่อดูรายละเอียดและลิงก์เดโมของเทมเพลตนี้
                 </p>
                 <div className="flex items-center justify-between pt-2">
-                  <span className="text-xs font-bold uppercase tracking-wider text-slate-400">ราคา</span>
-                  <span className="text-lg font-bold text-slate-900">{PRICE_FORMATTER.format(PRICE)} ฿</span>
+                  <span className="text-xs font-bold uppercase tracking-wider text-gray-400">ราคา</span>
+                  <span className="text-lg font-bold text-text-primary">{PRICE_FORMATTER.format(template.salePrice)} ฿</span>
                 </div>
               </div>
             </Link>
           ))
         ) : (
           <div className="col-span-full flex flex-col items-center justify-center py-20 text-center">
-            <div className="rounded-full bg-slate-100 p-6">
-              <svg className="h-12 w-12 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <div className="rounded-full bg-gray-100 p-6">
+              <svg className="h-12 w-12 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
               </svg>
             </div>
-            <h3 className="mt-4 text-lg font-semibold text-slate-900">ไม่พบเทมเพลตที่คุณค้นหา</h3>
-            <p className="mt-2 text-slate-500">ลองใช้คำค้นหาอื่นดูอีกครั้งครับ</p>
+            <h3 className="mt-4 text-lg font-semibold text-text-primary">ไม่พบเทมเพลตที่คุณค้นหา</h3>
+            <p className="mt-2 text-text-secondary">ลองใช้คำค้นหาอื่นดูอีกครั้งครับ</p>
           </div>
         )}
       </section>
