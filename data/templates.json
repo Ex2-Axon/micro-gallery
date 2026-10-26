@@ -499,5 +499,32 @@
         "url": "https://micro-badged-tags.vercel.app/badge.svg?text=&leftType=icon&left=typescript&style=flat"
       }
     ]
+  },
+  {
+    "name": "x-template-056",
+    "url": "https://x-template-056.vercel.app/",
+    "image": "/screenshots/x-template-056.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "typescript"
+    ],
+    "technologies": [],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-056",
+    "deploymentPlatform": "Vercel",
+    "deployedUrl": "https://x-template-056.vercel.app/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "ตัวอย่างเว็บไซต์ที่พักแบบหน้าเดียวสำหรับสาธิตเทมเพลต 2 สไตล์: Baan Suan Lodge และ City Inn Minimal ผู้ใช้สลับรูปแบบได้จากแถบด้านบน โดยเนื้อหาห้องพัก แกลเลอรี ที่อยู่ และข้อมูลติดต่อจะเปลี่ยนตามแบบที่เลือก",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "https://micro-badged-tags.vercel.app/badge.svg?text=Vite+8.3.5&style=flat"
+      },
+      {
+        "label": "typescript",
+        "url": "https://micro-badged-tags.vercel.app/badge.svg?text=&leftType=icon&left=typescript&style=flat"
+      }
+    ]
   }
 ]
