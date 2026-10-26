@@ -526,5 +526,34 @@
         "url": "https://micro-badged-tags.vercel.app/badge.svg?text=&leftType=icon&left=typescript&style=flat"
       }
     ]
+  },
+  {
+    "name": "x-template-057",
+    "url": "https://x-template-057.vercel.app/",
+    "image": "/screenshots/x-template-057.png",
+    "frameworkVersion": "8.0.12",
+    "languages": [
+      "typescript"
+    ],
+    "technologies": [
+      "react"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-057",
+    "deploymentPlatform": "Vercel",
+    "deployedUrl": "https://x-template-057.vercel.app/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "Template from x-template-057",
+    "badges": [
+      {
+        "label": "Vite 8.0.12",
+        "url": "https://micro-badged-tags.vercel.app/badge.svg?text=Vite+8.0.12&style=flat"
+      },
+      {
+        "label": "typescript",
+        "url": "https://micro-badged-tags.vercel.app/badge.svg?text=&leftType=icon&left=typescript&style=flat"
+      }
+    ]
   }
 ]
