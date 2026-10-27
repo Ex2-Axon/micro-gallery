@@ -4,31 +4,29 @@ import json
 import re
 import shutil
 import base64
+import xml.etree.ElementTree as ET
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
-from urllib.parse import quote, urlencode, urlparse
+from urllib.parse import quote, urlparse
 from urllib.request import Request, urlopen
 
 
 SUPPORTED_IMAGE_EXTENSIONS = {".avif", ".webp", ".png", ".jpg", ".jpeg"}
-LANGUAGE_ICONS = {
-    "c#": "csharp",
-    "c++": "cpp",
-    "css": "css",
-    "go": "go",
-    "html": "html",
-    "java": "java",
-    "javascript": "javascript",
-    "kotlin": "kotlin",
-    "php": "php",
-    "python": "python",
-    "ruby": "ruby",
-    "rust": "rust",
-    "sql": "sql",
-    "swift": "swift",
-    "typescript": "typescript",
+SVG_NAMESPACE = "http://www.w3.org/2000/svg"
+FRAMEWORK_BADGES = {
+    "Vite": ("vite.svg", "Vite"),
+    "Next.js": ("next.svg", "Next.js"),
+    "Special (Vite + database)": ("vite.svg", "Vite"),
+}
+LANGUAGE_BADGES = {
+    "css": "css.svg",
+    "html": "html.svg",
+    "java": "java.svg",
+    "javascript": "javascript.svg",
+    "python": "python.svg",
+    "typescript": "typescript.svg",
 }
 TEMPLATE_KINDS = {
     "Vite": ("x-template-", 2500, False),
@@ -132,19 +130,76 @@ def load_github_config(repo_root: Path) -> GitHubConfig:
     )
 
 
-def _badge_url(label: str, *, icon: str | None = None) -> str:
-    if icon:
-        query = urlencode(
-            {
-                "text": "",
-                "leftType": "icon",
-                "left": icon,
-                "style": "flat",
-            }
-        )
-    else:
-        query = urlencode({"text": label, "style": "flat"})
-    return f"https://micro-badged-tags.vercel.app/badge.svg?{query}"
+def _local_badge_path(repo_root: Path, filename: str) -> str:
+    badge_path = repo_root / "public" / "badges" / filename
+    if not badge_path.is_file():
+        raise RegistrationError(f"ไม่พบ badge asset ใน public/badges/{filename}")
+    return f"/badges/{filename}"
+
+
+def _write_framework_badge(
+    repo_root: Path,
+    framework: str,
+    framework_version: str,
+) -> Path:
+    try:
+        source_filename, framework_label = FRAMEWORK_BADGES[framework]
+    except KeyError as error:
+        raise RegistrationError("ไม่พบ badge asset สำหรับ framework ที่เลือก") from error
+
+    source_path = repo_root / "public" / "badges" / source_filename
+    if not source_path.is_file():
+        raise RegistrationError(f"ไม่พบ badge asset ใน public/badges/{source_filename}")
+
+    version_slug = re.sub(r"[^a-zA-Z0-9.-]+", "-", framework_version.strip()).strip(".-")
+    if not version_slug:
+        raise RegistrationError("เวอร์ชัน framework ใช้สร้างชื่อ badge ไม่ได้")
+    framework_slug = Path(source_filename).stem
+    destination = repo_root / "public" / "badges" / f"{framework_slug}-{version_slug}.svg"
+
+    label = f"{framework_label} {framework_version}"
+    try:
+        tree = ET.parse(source_path)
+    except (OSError, ET.ParseError) as error:
+        raise RegistrationError(f"อ่าน badge asset {source_filename} ไม่สำเร็จ") from error
+
+    root = tree.getroot()
+    title = root.find(f"{{{SVG_NAMESPACE}}}title")
+    text = root.find(f"{{{SVG_NAMESPACE}}}text")
+    if title is None or text is None:
+        raise RegistrationError(f"รูปแบบ badge asset {source_filename} ไม่ถูกต้อง")
+    if title.text == label and text.text == label:
+        return source_path
+
+    if destination.exists():
+        try:
+            existing_root = ET.parse(destination).getroot()
+        except (OSError, ET.ParseError) as error:
+            raise RegistrationError(f"อ่าน badge asset {destination.name} ไม่สำเร็จ") from error
+        existing_title = existing_root.find(f"{{{SVG_NAMESPACE}}}title")
+        existing_text = existing_root.find(f"{{{SVG_NAMESPACE}}}text")
+        if (
+            existing_title is None
+            or existing_text is None
+            or existing_title.text != label
+            or existing_text.text != label
+        ):
+            raise RegistrationError(
+                f"badge {destination.name} มีอยู่แล้วแต่ข้อมูลไม่ตรงกับ {label}"
+            )
+        return destination
+
+    title.text = label
+    text.text = label
+    temporary_path = destination.with_suffix(".svg.tmp")
+    ET.register_namespace("", SVG_NAMESPACE)
+    try:
+        tree.write(temporary_path, encoding="utf-8", xml_declaration=False)
+        temporary_path.replace(destination)
+    except OSError as error:
+        temporary_path.unlink(missing_ok=True)
+        raise RegistrationError(f"สร้าง badge {destination.name} ไม่สำเร็จ") from error
+    return destination
 
 
 def next_template_name(repo_root: Path, framework: str) -> str:
@@ -185,8 +240,9 @@ def validate_details(details: TemplateDetails) -> tuple[int, bool]:
     if not details.languages:
         raise RegistrationError("กรุณาระบุภาษาโปรแกรมอย่างน้อย 1 ภาษา")
     unsupported_languages = [
-        language for language in details.languages
-        if language.strip().lower() not in LANGUAGE_ICONS
+        language
+        for language in details.languages
+        if language.strip().lower() not in LANGUAGE_BADGES
     ]
     if unsupported_languages:
         raise RegistrationError(
@@ -195,7 +251,7 @@ def validate_details(details: TemplateDetails) -> tuple[int, bool]:
     if uses_database and not details.database.strip():
         raise RegistrationError("เทมเพลต Special ต้องระบุชื่อฐานข้อมูลที่ตรวจสอบแล้ว")
     if uses_database and not re.fullmatch(r"[a-z0-9-]+", details.database_icon.strip()):
-        raise RegistrationError("กรุณาระบุ Database logo ID เป็นตัวอักษร a-z, ตัวเลข หรือ -")
+        raise RegistrationError("กรุณาระบุชื่อไฟล์ badge ฐานข้อมูลเป็น a-z, ตัวเลข หรือ -")
     if not uses_database and details.database.strip():
         raise RegistrationError("ตามกฎราคา เทมเพลต Vite/Next.js ทั่วไปต้องไม่มีฐานข้อมูล")
     if not details.source_repository.strip() or not _is_http_url(details.source_repository.strip()):
@@ -240,28 +296,24 @@ def register_template(
     if any(item.get("name") == details.name for item in templates):
         raise RegistrationError(f"มีชื่อเทมเพลต {details.name} อยู่แล้ว")
 
-    language_badges = [
+    badges = [
         {
             "label": language,
-            "url": _badge_url(
-                language,
-                icon=LANGUAGE_ICONS[language.strip().lower()],
+            "url": _local_badge_path(
+                repo_root,
+                LANGUAGE_BADGES[language.strip().lower()],
             ),
         }
         for language in details.languages
-    ]
-    badges = [
-        {
-            "label": f"{details.framework} {details.framework_version.strip()}",
-            "url": _badge_url(f"{details.framework} {details.framework_version.strip()}"),
-        },
-        *language_badges,
     ]
     if uses_database:
         badges.append(
             {
                 "label": details.database.strip(),
-                "url": _badge_url(details.database.strip(), icon=details.database_icon.strip()),
+                "url": _local_badge_path(
+                    repo_root,
+                    f"{details.database_icon.strip()}.svg",
+                ),
             }
         )
 
@@ -281,14 +333,27 @@ def register_template(
         "about": details.description.strip(),
         "badges": badges,
     }
+    framework_badge = _write_framework_badge(
+        repo_root,
+        details.framework,
+        details.framework_version.strip(),
+    )
+    badges.insert(
+        0,
+        {
+            "label": f"{FRAMEWORK_BADGES[details.framework][1]} {details.framework_version.strip()}",
+            "url": f"/badges/{framework_badge.name}",
+        },
+    )
+
     if uses_database:
         record["database"] = details.database.strip()
 
     updated_templates = [*templates, record]
-    screenshot_directory.mkdir(parents=True, exist_ok=True)
-    shutil.copy2(image_source, screenshot_destination)
     temporary_path = templates_path.with_suffix(".json.tmp")
     try:
+        screenshot_directory.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(image_source, screenshot_destination)
         temporary_path.write_text(
             json.dumps(updated_templates, ensure_ascii=False, indent=2) + "\n",
             encoding="utf-8",
@@ -296,6 +361,7 @@ def register_template(
         temporary_path.replace(templates_path)
     except OSError as error:
         screenshot_destination.unlink(missing_ok=True)
+        framework_badge.unlink(missing_ok=True)
         temporary_path.unlink(missing_ok=True)
         raise RegistrationError("บันทึกข้อมูลเทมเพลตไม่สำเร็จ") from error
     return screenshot_destination

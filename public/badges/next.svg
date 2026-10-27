@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="28" viewBox="0 0 120 28" role="img" aria-labelledby="title">
+  <title id="title">Next.js</title>
+  <defs>
+    <linearGradient id="badge-surface" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#214b35"/>
+      <stop offset="1" stop-color="#0c291d"/>
+    </linearGradient>
+  </defs>
+  <rect x="0.5" y="0.5" width="119" height="27" rx="13.5" fill="url(#badge-surface)" stroke="#63e88b" stroke-width="0.8"/>
+  <path d="M9 2H111M9 26H104" stroke="#a2ffb6" stroke-opacity="0.42" stroke-width="0.6"/>
+  <path d="M113 9h3v3m-3 4h3v3" fill="none" stroke="#8cf5a6" stroke-opacity="0.72" stroke-width="0.7" stroke-linecap="square"/>
+  <rect x="11" y="3" width="22" height="22" rx="6" fill="#ffffff" stroke="#e2e8f0"/>
+  <svg x="14" y="6" width="16" height="16" viewBox="0 0 24 24"><path fill="#111827" d="M18.665 21.978C16.758 23.255 14.465 24 12 24 5.377 24 0 18.623 0 12S5.377 0 12 0s12 5.377 12 12c0 3.583-1.574 6.801-4.067 9.001L9.219 7.2H7.2v9.596h1.615V9.251l9.85 12.727Zm-3.332-8.533 1.6 2.061V7.2h-1.6v6.245Z"/></svg>
+  <text x="74" y="14" text-anchor="middle" dominant-baseline="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="14" font-weight="600" letter-spacing="0.1">Next.js</text>
+</svg>

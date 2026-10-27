@@ -1,5 +1,3 @@
-import { readdirSync } from "node:fs";
-import { join } from "node:path";
 import { TEMPLATE_PRICES } from "./config";
 import configuredTemplates from "./templates.json";
 
@@ -80,61 +78,12 @@ function getTemplateDefaults(
   };
 }
 
-const supportedExtensions = new Set(["avif", "webp", "png", "jpg", "jpeg"]);
-const extensionPriority = new Map(
-  ["avif", "webp", "png", "jpg", "jpeg"].map((extension, index) => [
-    extension,
-    index,
-  ]),
-);
-const publicDirectory = join(process.cwd(), "public");
-
-const discoveredImages = readdirSync(publicDirectory)
-  .map((filename) => {
-    const match = /^(x-template-\d+)\.([^.]+)$/i.exec(filename);
-
-    if (!match || !supportedExtensions.has(match[2].toLowerCase())) {
-      return null;
-    }
-
-    return {
-      filename,
-      name: match[1].toLowerCase(),
-      extension: match[2].toLowerCase(),
-    };
-  })
-  .filter((image) => image !== null)
-  .sort(
-    (left, right) =>
-      (extensionPriority.get(left.extension) ?? Number.MAX_SAFE_INTEGER) -
-      (extensionPriority.get(right.extension) ?? Number.MAX_SAFE_INTEGER) ||
-      left.filename.localeCompare(right.filename),
-  );
-
-const discoveredTemplates = new Map<string, Template>();
-
-for (const image of discoveredImages) {
-  if (!discoveredTemplates.has(image.name)) {
-    discoveredTemplates.set(image.name, {
-      name: image.name,
-      url: `https://ex2-axon.github.io/${image.name}/`,
-      image: `/${image.filename}`,
-      ...getTemplateDefaults(image.name),
-    });
-  }
-}
-
-const configuredNames = new Set(configuredTemplates.map((template) => template.name));
-
-export const templates: Template[] = [
-  ...(configuredTemplates as Omit<
+export const templates: Template[] = (
+  configuredTemplates as Omit<
     Template,
     "framework" | "salePrice" | "usesDatabase"
-  >[]).map((template) => ({
-    ...template,
-    ...getTemplateDefaults(template.name),
-  })),
-  ...Array.from(discoveredTemplates.values()).filter(
-    (template) => !configuredNames.has(template.name),
-  ),
-];
+  >[]
+).map((template) => ({
+  ...template,
+  ...getTemplateDefaults(template.name),
+}));

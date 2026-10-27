@@ -26,16 +26,20 @@ test("search opens a template detail route in the same tab", async ({ page }) =>
   await expect(page).toHaveTitle(/x-template-001/);
 });
 
-test("daily featured hero changes screenshots and has spacing before promotions", async ({ page }) => {
+test("daily featured hero handles available templates and has spacing before promotions", async ({ page }) => {
   await page.goto("/");
 
   const hero = page.getByRole("region", { name: "เทมเพลตเด่นประจำวัน" });
   await expect(hero).toBeVisible();
   const heading = hero.getByRole("heading", { level: 2 });
-  const initialTemplate = await heading.textContent();
-
-  await hero.getByRole("button", { name: "ภาพถัดไป" }).click();
-  await expect(heading).not.toHaveText(initialTemplate ?? "");
+  const thumbnails = hero.getByRole("button", { name: /^แสดง / });
+  if ((await thumbnails.count()) > 1) {
+    const initialTemplate = await heading.textContent();
+    await hero.getByRole("button", { name: "ภาพถัดไป" }).click();
+    await expect(heading).not.toHaveText(initialTemplate ?? "");
+  } else {
+    await expect(hero.getByRole("button", { name: "ภาพถัดไป" })).toHaveCount(0);
+  }
 
   const spacing = await page.evaluate(() => {
     const heroElement = document.querySelector(
@@ -62,17 +66,26 @@ test("daily featured hero changes screenshots and has spacing before promotions"
   expect(spacing.promotionTop - spacing.heroBottom).toBeGreaterThanOrEqual(40);
 });
 
-test("gallery pagination changes the active page", async ({ page }) => {
+test("gallery displays registered templates and paginates only when needed", async ({ page }) => {
   await page.goto("/");
 
   const templateLinks = page
     .getByRole("region", { name: "รายการเทมเพลต" })
     .locator('a[href^="/template/"]');
-  await expect(templateLinks).toHaveCount(12);
-  await page.getByRole("button", { name: "หน้า 2" }).click();
+  const resultText = await page.getByText(/^พบ \d+ รายการ$/).textContent();
+  const templateCount = Number(resultText?.match(/\d+/)?.[0]);
+  if (!Number.isInteger(templateCount)) {
+    throw new Error("The gallery result count was not found.");
+  }
 
-  await expect(page.getByRole("button", { name: "หน้า 2" })).toHaveAttribute("aria-current", "page");
-  await expect(templateLinks).toHaveCount(12);
+  await expect(templateLinks).toHaveCount(Math.min(templateCount, 12));
+  if (templateCount > 12) {
+    await page.getByRole("button", { name: "หน้า 2" }).click();
+    await expect(page.getByRole("button", { name: "หน้า 2" })).toHaveAttribute("aria-current", "page");
+    await expect(templateLinks).toHaveCount(Math.min(templateCount - 12, 12));
+  } else {
+    await expect(page.getByRole("navigation", { name: "Pagination" })).toHaveCount(0);
+  }
 });
 
 test("pricing page includes shared company and legal links", async ({ page }) => {

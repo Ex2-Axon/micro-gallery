@@ -1,0 +1,17 @@
+Font Awesome Free brand icons used in github.svg, typescript.svg, java.svg,
+html.svg, python.svg, react.svg, and tailwindcss.svg.
+
+Copyright 2026 Fonticons, Inc. Icons are licensed under CC BY 4.0:
+https://creativecommons.org/licenses/by/4.0/
+Source: https://fontawesome.com/
+
+Brand icons are trademarks of their respective owners and are used only to
+identify the corresponding products and services.
+
+Social brand icons used in facebook.svg, line.svg, x.svg, instagram.svg,
+linkedin.svg, discord.svg, youtube.svg, and tiktok.svg are also Font Awesome
+Free icons under CC BY 4.0.
+
+The Neon, Next.js, Supabase, and Vercel marks in neon.svg, next.svg,
+supabase.svg, and vercel.svg are from Simple Icons (CC0 1.0).
+The Vite mark in vite.svg is from the official Vite repository.

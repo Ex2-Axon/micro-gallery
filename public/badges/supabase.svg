@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="28" viewBox="0 0 120 28" role="img" aria-labelledby="title">
+  <title id="title">Supabase</title>
+  <defs>
+    <linearGradient id="badge-surface" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#214b35"/>
+      <stop offset="1" stop-color="#0c291d"/>
+    </linearGradient>
+  </defs>
+  <rect x="0.5" y="0.5" width="119" height="27" rx="13.5" fill="url(#badge-surface)" stroke="#63e88b" stroke-width="0.8"/>
+  <path d="M9 2H111M9 26H104" stroke="#a2ffb6" stroke-opacity="0.42" stroke-width="0.6"/>
+  <path d="M113 9h3v3m-3 4h3v3" fill="none" stroke="#8cf5a6" stroke-opacity="0.72" stroke-width="0.7" stroke-linecap="square"/>
+  <rect x="11" y="3" width="22" height="22" rx="6" fill="#ffffff" stroke="#e2e8f0"/>
+  <svg x="14" y="6" width="16" height="16" viewBox="0 0 24 24"><path fill="#3ecf8e" d="M11.9 1.036c-.015-.986-1.26-1.41-1.874-.637L.764 12.05C-.33 13.427.65 15.455 2.409 15.455h9.579l.113 7.51c.014.985 1.259 1.408 1.873.636l9.262-11.653c1.093-1.375.113-3.403-1.645-3.403h-9.642z"/></svg>
+  <text x="74" y="14" text-anchor="middle" dominant-baseline="middle" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="14" font-weight="600" letter-spacing="0.1">Supabase</text>
+</svg>

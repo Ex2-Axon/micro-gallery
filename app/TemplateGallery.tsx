@@ -127,9 +127,9 @@ export default function TemplateGallery({ initialTemplates }: TemplateGalleryPro
                         src={badge.url}
                         alt={badge.label}
                         width={120}
-                        height={24}
+                        height={28}
                         unoptimized
-                        className="h-6 w-auto"
+                        className="h-7 w-auto"
                       />
                     ))}
                   </div>

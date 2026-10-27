@@ -6,26 +6,26 @@ Read this section alongside the general guidance below. When instructions confli
 
 - This is a root-level Next.js App Router application. Routes are `app/page.tsx` (`/`), `app/pricing/page.tsx` (`/pricing`), and `app/template/[slug]/page.tsx` (`/template/[slug]`).
 - `app/TemplateGallery.tsx` is the interactive client component for search and 12-item pagination. The route pages and root layout are server-rendered.
-- `data/templates.ts` combines explicit metadata from `data/templates.json` with numbered image files discovered in `public/`. `data/config.ts` holds shared pricing and external-link constants.
-- The detail routes are statically generated from the combined template list. No database, authentication system, or application API is currently used.
+- `data/templates.ts` builds the gallery exclusively from explicit metadata in `data/templates.json`; image files in `public/` do not create gallery entries by themselves. `data/config.ts` holds shared pricing and external-link constants.
+- The detail routes are statically generated from the configured template list. No database, authentication system, or application API is currently used.
 - `next.config.ts` allows the `127.0.0.1` development origin; preserve this unless the local development setup changes and the pagination/image hydration issue is retested.
 
 ## Template content workflow
 
-- Automatically discovered images must be directly under `public/` and named `x-template-<number>.<extension>`. Supported extensions are `avif`, `webp`, `png`, `jpg`, and `jpeg`; AVIF is preferred when more than one format exists for a template.
-- Add custom names, special image paths, and/or non-default demo URLs as entries in `data/templates.json`. The referenced image still needs to exist in `public/`. Explicit entries override discovered entries with the same name.
+- Add each template explicitly to `data/templates.json`, including its name, demo URL, and screenshot path. The referenced image still needs to exist in `public/`; unlisted images are not shown in the gallery.
 - Use these sale-price and database defaults when adding a template: `x-template-special-...` is 5,000 baht and uses a database; otherwise `x-template-next-...` is 3,500 baht with no database; other `x-template-...` entries are 2,500 baht with no database. Apply the special prefix rule before the general `x-template-...` rule. The category does not identify the database product; record its name only after verification.
 - Before publishing a template, provide and verify its metadata: framework/technologies used (including framework version), programming languages, whether it uses a database and which one, source repository, deployment platform and deployed URL, sale price and currency, screenshot image, screenshot path in the project, and a brief description. Store screenshot images under `public/` and record their exact public path (for example, `/x-template-001.png`) in the template metadata. Do not infer or invent missing details; confirm them before publishing the template.
-- Image discovery is performed by the server-side data module during build/rendering, not by a live upload or background watcher. Rebuild/redeploy to publish newly added image assets and generated detail routes.
+- Template metadata is loaded by the server-side data module during build/rendering, not by a live upload or background watcher. Rebuild/redeploy to publish new entries and generated detail routes.
 - Keep the gallery page size at 12 unless the product requirement changes. Search is over the full template list, while pagination is applied to the filtered results.
 
 ## Template technology badges
 
 - Every template card for a template offered for sale must show badges for its actual framework, programming languages, and database (if it uses one). Do not infer a template's stack from the gallery application's own dependencies.
-- Create and standardize badge tags with [Micro-Badged-Tags](https://micro-badged-tags.vercel.app/), then use the badge image URL produced by the service on the card.
-- For framework badges, show the framework name and the version used by that template. Check the template's own package/configuration files for the version; create the badge URL with Micro-Badged-Tags, for example: `![Next.js: 16.4.2](https://micro-badged-tags.vercel.app/badge.svg?text=Next.js%2016.4.2&style=flat)`.
-- For programming languages, use the language's logo badge (for example, `html`, `python`, `typescript`, or `javascript`) rather than a framework badge.
-- Add a database badge only when the template actually uses a database. Use the database logo and a blank label where appropriate; for example: `![Supabase](https://micro-badged-tags.vercel.app/badge.svg?text=Supabase&leftType=icon&left=supabase&leftColor=%23292e2c&textColor=%232563EB&style=flat)`. Do not show a database badge when there is no database.
+- Store badge SVG assets inside `public/badges/` and reference them with `/badges/...` paths in template metadata. Never use an external badge service or CDN.
+- Framework badges must visibly include the verified framework version. The registrar creates a template-specific local SVG from the framework mark; check the template's own package/configuration files before entering its version.
+- Use a local language badge that matches each verified language. The registrar currently supports CSS, HTML, Java, JavaScript, Python, and TypeScript; add and verify the corresponding local asset before extending that list.
+- Use locally stored Font Awesome brand SVGs when an icon is available; create and store a project-local SVG mark for requested brands that Font Awesome does not provide.
+- Add a database badge only when the template actually uses a database, and use an existing local asset that identifies the verified database product. Do not show a database badge when there is no database.
 - Keep each template's badge metadata with that template's explicit metadata, and render its badges consistently on the template cards.
 
 ## Dependency and validation policy
@@ -140,5 +140,6 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 2. **ใช้ไฟล์ proxy.ts แทน** สำหรับการดักจับ Request และจัดการ Headers, Cookies หรือการ Redirect
 3. **หลีกเลี่ยงการทำ Authentication ใน Proxy** การตรวจสอบสิทธิ์ (Auth) ควรทำที่ระดับ Data Access Layer หรือภายใน Server Components/Route Handlers โดยตรง แทนการทำที่ขอบเขตของเครือข่าย เพื่อป้องกันปัญหาความล่าช้า (Latency)
 4. **ใช้ next.config.js สำหรับ static redirects** หากเป็นเพียงแค่ Redirect/Rewrite แบบคงที่ ให้ใช้ฟังก์ชัน `redirects` หรือ `rewrites` ใน `next.config.js` เท่านั้น เพื่อประสิทธิภาพสูงสุด
+5. **อย่าสร้างไฟล์/แก้ไขเอง** หรือ สร้างอะไรเองโดยไม่ได้สั่ง
 
 ---

@@ -22,7 +22,24 @@ class TemplateRegistrarTests(unittest.TestCase):
         self.temporary_directory = tempfile.TemporaryDirectory()
         self.repo_root = Path(self.temporary_directory.name)
         (self.repo_root / "data").mkdir()
-        (self.repo_root / "public").mkdir()
+        badge_directory = self.repo_root / "public" / "badges"
+        badge_directory.mkdir(parents=True)
+        for badge_name in (
+            "css.svg",
+            "html.svg",
+            "javascript.svg",
+            "java.svg",
+            "next.svg",
+            "python.svg",
+            "supabase.svg",
+            "typescript.svg",
+            "vite.svg",
+        ):
+            (badge_directory / badge_name).write_text(
+                '<svg xmlns="http://www.w3.org/2000/svg">'
+                '<title id="title">Base</title><text>Base</text></svg>',
+                encoding="utf-8",
+            )
         (self.repo_root / "data" / "templates.json").write_text(
             json.dumps(
                 [
@@ -74,6 +91,59 @@ class TemplateRegistrarTests(unittest.TestCase):
         self.assertEqual(saved["languages"], ["TypeScript", "CSS"])
         self.assertEqual(saved["technologies"], ["Tailwind CSS"])
         self.assertEqual(len(saved["badges"]), 3)
+        self.assertEqual(
+            saved["badges"][0]["url"],
+            "/badges/next-16.4.2.svg",
+        )
+        self.assertEqual(saved["badges"][1]["url"], "/badges/typescript.svg")
+        self.assertEqual(saved["badges"][2]["url"], "/badges/css.svg")
+        framework_badge = (
+            self.repo_root
+            / "public"
+            / "badges"
+            / "next-16.4.2.svg"
+        ).read_text(encoding="utf-8")
+        self.assertIn("Next.js 16.4.2", framework_badge)
+        self.assertTrue(all(badge["url"].startswith("/badges/") for badge in saved["badges"]))
+
+    def test_templates_with_same_framework_version_reuse_badge(self) -> None:
+        first = TemplateDetails(
+            name="x-template-004",
+            framework="Vite",
+            framework_version="8.3.5",
+            languages=("TypeScript",),
+            technologies=(),
+            database="",
+            database_icon="",
+            source_repository="https://github.com/example/template-004",
+            deployment_platform="Vercel",
+            deployed_url="https://template-004.vercel.app",
+            description="A verified Vite template.",
+        )
+        second = TemplateDetails(
+            **{
+                **first.__dict__,
+                "name": "x-template-005",
+                "source_repository": "https://github.com/example/template-005",
+                "deployed_url": "https://template-005.vercel.app",
+            }
+        )
+        second_screenshot = self.repo_root / "second.png"
+        second_screenshot.write_bytes(b"second png content")
+
+        register_template(self.repo_root, first, self.screenshot)
+        register_template(self.repo_root, second, second_screenshot)
+
+        templates = json.loads(
+            (self.repo_root / "data" / "templates.json").read_text(encoding="utf-8")
+        )
+        badges = [
+            next(badge for badge in item["badges"] if badge["label"] == "Vite 8.3.5")
+            for item in templates[-2:]
+        ]
+        self.assertEqual(badges[0]["url"], "/badges/vite-8.3.5.svg")
+        self.assertEqual(badges[1]["url"], badges[0]["url"])
+        self.assertTrue((self.repo_root / "public" / badges[0]["url"].lstrip("/")).is_file())
 
     def test_special_template_requires_and_records_database(self) -> None:
         details = TemplateDetails(
@@ -100,6 +170,8 @@ class TemplateRegistrarTests(unittest.TestCase):
         self.assertTrue(saved["usesDatabase"])
         self.assertEqual(saved["database"], "Supabase")
         self.assertEqual(len(saved["badges"]), 3)
+        self.assertEqual(saved["badges"][0]["label"], "Vite 5.4.0")
+        self.assertEqual(saved["badges"][2]["url"], "/badges/supabase.svg")
 
     def test_rejects_duplicate_and_wrong_framework_prefix(self) -> None:
         details = TemplateDetails(

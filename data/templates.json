@@ -2,557 +2,1840 @@
   {
     "name": "x-template-001",
     "url": "https://ex2-axon.github.io/x-template-001/",
-    "image": "/x-template-001.png"
-  },
-  {
-    "name": "x-template-002",
-    "url": "https://ex2-axon.github.io/x-template-002/",
-    "image": "/x-template-002.png"
-  },
-  {
-    "name": "x-template-003",
-    "url": "https://ex2-axon.github.io/x-template-003/",
-    "image": "/x-template-003.png"
-  },
-  {
-    "name": "x-template-004",
-    "url": "https://ex2-axon.github.io/x-template-004/",
-    "image": "/x-template-004.png"
-  },
-  {
-    "name": "x-template-005",
-    "url": "https://ex2-axon.github.io/x-template-005/",
-    "image": "/x-template-005.png"
-  },
-  {
-    "name": "x-template-006",
-    "url": "https://ex2-axon.github.io/x-template-006/",
-    "image": "/x-template-006.png"
-  },
-  {
-    "name": "x-template-007",
-    "url": "https://ex2-axon.github.io/x-template-007/",
-    "image": "/x-template-007.png"
-  },
-  {
-    "name": "x-template-008",
-    "url": "https://ex2-axon.github.io/x-template-008/",
-    "image": "/x-template-008.png"
-  },
-  {
-    "name": "x-template-009",
-    "url": "https://ex2-axon.github.io/x-template-009/",
-    "image": "/x-template-009.png"
-  },
-  {
-    "name": "x-template-010",
-    "url": "https://ex2-axon.github.io/x-template-010/",
-    "image": "/x-template-010.png"
-  },
-  {
-    "name": "x-template-011",
-    "url": "https://ex2-axon.github.io/x-template-011/",
-    "image": "/x-template-011.png"
-  },
-  {
-    "name": "x-template-012",
-    "url": "https://ex2-axon.github.io/x-template-012/",
-    "image": "/x-template-012.png"
-  },
-  {
-    "name": "x-template-013",
-    "url": "https://ex2-axon.github.io/x-template-013/",
-    "image": "/x-template-013.png"
-  },
-  {
-    "name": "x-template-014",
-    "url": "https://ex2-axon.github.io/x-template-014/",
-    "image": "/x-template-014.png"
-  },
-  {
-    "name": "x-template-015",
-    "url": "https://ex2-axon.github.io/x-template-015/",
-    "image": "/x-template-015.png"
-  },
-  {
-    "name": "x-template-016",
-    "url": "https://ex2-axon.github.io/x-template-016/",
-    "image": "/x-template-016.png"
-  },
-  {
-    "name": "x-template-017",
-    "url": "https://ex2-axon.github.io/x-template-017/",
-    "image": "/x-template-017.png"
-  },
-  {
-    "name": "x-template-018",
-    "url": "https://ex2-axon.github.io/x-template-018/",
-    "image": "/x-template-018.png"
-  },
-  {
-    "name": "x-template-019",
-    "url": "https://ex2-axon.github.io/x-template-019/",
-    "image": "/x-template-019.png"
-  },
-  {
-    "name": "x-template-020",
-    "url": "https://ex2-axon.github.io/x-template-020/",
-    "image": "/x-template-020.png"
-  },
-  {
-    "name": "x-template-021",
-    "url": "https://ex2-axon.github.io/x-template-021/",
-    "image": "/x-template-021.png"
-  },
-  {
-    "name": "x-template-022",
-    "url": "https://ex2-axon.github.io/x-template-022/",
-    "image": "/x-template-022.png"
-  },
-  {
-    "name": "x-template-023",
-    "url": "https://ex2-axon.github.io/x-template-023/",
-    "image": "/x-template-023.png"
-  },
-  {
-    "name": "x-template-024",
-    "url": "https://ex2-axon.github.io/x-template-024/",
-    "image": "/x-template-024.png"
-  },
-  {
-    "name": "x-template-025",
-    "url": "https://ex2-axon.github.io/x-template-025/",
-    "image": "/x-template-025.png"
-  },
-  {
-    "name": "x-template-026",
-    "url": "https://ex2-axon.github.io/x-template-026/",
-    "image": "/x-template-026.png"
-  },
-  {
-    "name": "x-template-027",
-    "url": "https://ex2-axon.github.io/x-template-027/",
-    "image": "/x-template-027.png"
-  },
-  {
-    "name": "x-template-028",
-    "url": "https://ex2-axon.github.io/x-template-028/",
-    "image": "/x-template-028.png"
-  },
-  {
-    "name": "x-template-029",
-    "url": "https://ex2-axon.github.io/x-template-029/",
-    "image": "/x-template-029.png"
-  },
-  {
-    "name": "x-template-030",
-    "url": "https://ex2-axon.github.io/x-template-030/",
-    "image": "/x-template-030.png"
-  },
-  {
-    "name": "x-template-031",
-    "url": "https://ex2-axon.github.io/x-template-031/",
-    "image": "/x-template-031.png"
-  },
-  {
-    "name": "x-template-032",
-    "url": "https://ex2-axon.github.io/x-template-032/",
-    "image": "/x-template-032.png"
-  },
-  {
-    "name": "x-template-033",
-    "url": "https://ex2-axon.github.io/x-template-033/",
-    "image": "/x-template-033.png"
-  },
-  {
-    "name": "x-template-034",
-    "url": "https://ex2-axon.github.io/x-template-034/",
-    "image": "/x-template-034.png"
-  },
-  {
-    "name": "x-template-035",
-    "url": "https://ex2-axon.github.io/x-template-035/",
-    "image": "/x-template-035.png"
-  },
-  {
-    "name": "x-template-036",
-    "url": "https://ex2-axon.github.io/x-template-036/",
-    "image": "/x-template-036.png"
-  },
-  {
-    "name": "x-template-037",
-    "url": "https://ex2-axon.github.io/x-template-037/",
-    "image": "/x-template-037.png"
-  },
-  {
-    "name": "x-template-038",
-    "url": "https://ex2-axon.github.io/x-template-038/",
-    "image": "/x-template-038.png"
-  },
-  {
-    "name": "x-template-039",
-    "url": "https://ex2-axon.github.io/x-template-039/",
-    "image": "/x-template-039.png"
-  },
-  {
-    "name": "x-template-040",
-    "url": "https://ex2-axon.github.io/x-template-040/",
-    "image": "/x-template-040.png"
-  },
-  {
-    "name": "x-template-041",
-    "url": "https://ex2-axon.github.io/x-template-041/",
-    "image": "/x-template-041.png"
-  },
-  {
-    "name": "x-template-042",
-    "url": "https://ex2-axon.github.io/x-template-042/",
-    "image": "/x-template-042.png"
-  },
-  {
-    "name": "x-template-043",
-    "url": "https://ex2-axon.github.io/x-template-043/",
-    "image": "/x-template-043.png"
-  },
-  {
-    "name": "x-template-044",
-    "url": "https://ex2-axon.github.io/x-template-044/",
-    "image": "/x-template-044.png"
-  },
-  {
-    "name": "x-template-045",
-    "url": "https://ex2-axon.github.io/x-template-045/",
-    "image": "/x-template-045.png"
-  },
-  {
-    "name": "x-template-046",
-    "url": "https://ex2-axon.github.io/x-template-046/",
-    "image": "/x-template-046.png"
-  },
-  {
-    "name": "x-template-047",
-    "url": "https://ex2-axon.github.io/x-template-047/",
-    "image": "/x-template-047.png"
-  },
-  {
-    "name": "x-template-048",
-    "url": "https://ex2-axon.github.io/x-template-048/",
-    "image": "/x-template-048.png"
-  },
-  {
-    "name": "x-template-049",
-    "url": "https://ex2-axon.github.io/x-template-049/",
-    "image": "/x-template-049.png"
-  },
-  {
-    "name": "x-template-050",
-    "url": "https://ex2-axon.github.io/x-template-050/",
-    "image": "/x-template-050.png"
-  },
-  {
-    "name": "x-template-051",
-    "url": "https://ex2-axon.github.io/x-template-051/",
-    "image": "/x-template-051.png"
-  },
-  {
-    "name": "x-template-052",
-    "url": "https://ex2-axon.github.io/x-template-052/",
-    "image": "/x-template-052.png"
-  },
-  {
-    "name": "x-template-053",
-    "url": "https://ex2-axon.github.io/x-template-053/",
-    "image": "/x-template-053.png"
-  },
-  {
-    "name": "x-template-special-001",
-    "url": "https://ex2-axon.github.io/x-template-special-001/",
-    "image": "/x-template-special-001_20260603_152158.png"
-  },
-  {
-    "name": "x-template-special-002",
-    "url": "https://ex2-axon.github.io/x-template-special-002/",
-    "image": "/x-template-special-002_20260603_152240.png"
-  },
-  {
-    "name": "x-template-special-003",
-    "url": "https://ex2-axon.github.io/x-template-special-003/",
-    "image": "/x-template-special-003_20260603_152324.png"
-  },
-  {
-    "name": "x-template-special-004",
-    "url": "https://ex2-axon.github.io/x-template-special-004/",
-    "image": "/x-template-special-004_20260603_152409.png"
-  },
-  {
-    "name": "x-template-special-005",
-    "url": "https://ex2-axon.github.io/x-template-special-005/",
-    "image": "/x-template-special-005_20260603_152454.png"
-  },
-  {
-    "name": "x-template-special-006",
-    "url": "https://ex2-axon.github.io/x-template-special-006/",
-    "image": "/x-template-special-006_20260603_152544.png"
-  },
-  {
-    "name": "x-template-special-007",
-    "url": "https://ex2-axon.github.io/x-template-special-007/",
-    "image": "/x-template-special-007_20260603_152638.png"
-  },
-  {
-    "name": "x-template-special-008",
-    "url": "https://ex2-axon.github.io/x-template-special-008/",
-    "image": "/x-template-special-008_20260603_152733.png"
-  },
-  {
-    "name": "x-template-special-009",
-    "url": "https://ex2-axon.github.io/x-template-special-009/",
-    "image": "/x-template-special-009_20260603_152806.png"
-  },
-  {
-    "name": "x-template-special-010",
-    "url": "https://ex2-axon.github.io/x-template-special-010/",
-    "image": "/x-template-special-010_20260603_152839.png"
-  },
-  {
-    "name": "x-template-next-011",
-    "url": "https://ex2-axon.github.io/x-template-next-011/",
-    "image": "/x-template-next-011.avif",
-    "type": "lodging",
-    "tagline": "พักผ่อนท่ามกลางธรรมชาติ กลับมาพักใจให้สดชื่น",
-    "rooms": [
-      {
-        "name": "Garden View Room",
-        "description": "ห้องพักที่ออกเชิงสวนสวย พบได้กับเสียงนกและธรรมชาติ",
-        "amenities": [
-          "เตียงควีนไซส์",
-          "แอร์",
-          "ห้องน้ำส่วนตัว",
-          "Wi-Fi ฟรี",
-          "ระเบียงส่วนตัว"
-        ],
-        "pricePerNight": 1290,
-        "priceCurrency": "บาท"
-      },
-      {
-        "name": "Balcony Suite",
-        "description": "ห้องหลักชั้นที่มีระเบียงขนาดใหญ่ เหมาะสำหรับพักผ่อนยาวนาน",
-        "amenities": [
-          "เตียงควีนไซส์",
-          "โซฟา",
-          "แอร์",
-          "ห้องน้ำแบบฝักบัว",
-          "Wi-Fi ฟรี",
-          "ระเบียงกว้าง"
-        ],
-        "pricePerNight": 1890,
-        "priceCurrency": "บาท"
-      },
-      {
-        "name": "Family Cottage",
-        "description": "บ้านเล็กสำหรับครอบครัว มี 2 ห้องนอนและห้องนั่งเล่น",
-        "amenities": [
-          "เตียงดับเบิล 2 ตัว",
-          "โซฟา",
-          "แอร์",
-          "ห้องน้ำ 2 ห้อง",
-          "ครัวเล็ก",
-          "Wi-Fi ฟรี",
-          "ระเบียง"
-        ],
-        "pricePerNight": 2490,
-        "priceCurrency": "บาท"
-      }
-    ],
-    "facilities": [
-      "Wi-Fi ฟรี",
-      "ที่จอดรถ",
-      "อาหารเช้าแบบไทย-ตะวันตก",
-      "สวนส่วนตัว",
-      "ระเบียง/ชานพัก",
-      "น้ำดื่มฟรี"
-    ],
-    "location": {
-      "address": "123 หมู่ 5 ต.บ้านสวน อ.เมือง จ.เชียงใหม่ 50000",
-      "directions": "เข้าจากถนนหลวง 107 ตรงไปยังหมู่บ้าน ตามป้ายชี้ทาง",
-      "googleMapsUrl": "https://maps.google.com/?q=18.7883,98.9853"
-    },
-    "contact": {
-      "phone": "081-234-5678",
-      "lineId": "baansuannature",
-      "lineUrl": "https://line.me/R/ti/p/~baansuannature"
-    },
-    "gallery": [
-      "/x-template-next-011-01.avif",
-      "/x-template-next-011-02.avif",
-      "/x-template-next-011-03.avif",
-      "/x-template-next-011-04.avif",
-      "/x-template-next-011-05.avif",
-      "/x-template-next-011-06.avif",
-      "/x-template-next-011-07.avif",
-      "/x-template-next-011-08.avif",
-      "/x-template-next-011-09.avif",
-      "/x-template-next-011-10.avif"
-    ],
-    "about": "Baan Suan Lodge เป็นที่พักแบบบ้านเรือนไทยสมัยใหม่ ตั้งอยู่ท่ามกลางสวนสวยอันเขียวชอุ่ม ออกแบบมาเพื่อให้ผู้มาพักได้นั่งพักผ่อน ใจสบาย และอยู่ใกล้ชิดกับธรรมชาติ ทีมงานพร้อมให้บริการด้วยใจ"
-  },
-  {
-    "name": "x-template-next-012",
-    "url": "https://ex2-axon.github.io/x-template-next-012/",
-    "image": "/x-template-next-012.avif",
-    "type": "lodging",
-    "tagline": "สะอาด เรียบง่าย ใจกลางเมือง",
-    "about": "City Inn Minimal เป็นที่พักสุนทรีย์ที่ยึดหลักการน้อยคือมาก ห้องพักสะอาด พื้นที่พักผ่อนขนาดกะทัดรัด ที่ตั้งสะดวกใจกลางเมืองใกล้จุดท่องเที่ยวหลัก",
-    "rooms": [
-      {
-        "name": "Standard Room",
-        "description": "ห้องพักมาตรฐานสำหรับผู้ที่ต้องการราคาประหยัด",
-        "amenities": [
-          "เตียงเดี่ยว",
-          "แอร์",
-          "ห้องน้ำส่วนตัว",
-          "Wi-Fi ฟรี"
-        ],
-        "pricePerNight": 790,
-        "priceCurrency": "บาท"
-      },
-      {
-        "name": "Deluxe Room",
-        "description": "ห้องพักที่มีสิ่งอำนวยความสะดวกเพิ่มเติม เหมาะสำหรับผู้ที่ต้องการความสำรวจ",
-        "amenities": [
-          "เตียงควีนไซส์",
-          "แอร์",
-          "ห้องน้ำแบบฝักบัว",
-          "Wi-Fi ฟรี",
-          "ตู้เย็น"
-        ],
-        "pricePerNight": 990,
-        "priceCurrency": "บาท"
-      },
-      {
-        "name": "Twin Room",
-        "description": "ห้องพักที่มีเตียงเดี่ยว 2 เตียง เหมาะสำหรับเพื่อนหรือครอบครัวเล็ก",
-        "amenities": [
-          "เตียงเดี่ยว 2 เตียง",
-          "แอร์",
-          "ห้องน้ำส่วนตัว",
-          "Wi-Fi ฟรี",
-          "โทรทัศน์ระบบ Smart"
-        ],
-        "pricePerNight": 1290,
-        "priceCurrency": "บาท"
-      }
-    ],
-    "facilities": [
-      "Wi-Fi",
-      "ที่จอดรถ",
-      "แอร์",
-      "ห้องน้ำส่วนตัว",
-      "น้ำร้อน",
-      "โทรทัศน์",
-      "ลิฟต์"
-    ],
-    "location": {
-      "address": "456 ถ.สีลม แขวงสีลม เขตบางรัก กรุงเทพฯ 10500",
-      "directions": "เข้าจากถนนสีลม ไปทางตะวันตก ห้องพักอยู่บนเนื้อที่มุมซอย",
-      "googleMapsUrl": "https://maps.google.com/?q=13.7307,100.5316"
-    },
-    "contact": {
-      "phone": "+66-2-234-5678",
-      "lineId": "cityinnminimal",
-      "lineUrl": "https://line.me/R/ti/p/@cityinnminimal"
-    },
-    "gallery": [
-      "/x-template-next-012-gallery-1.avif",
-      "/x-template-next-012-gallery-2.avif",
-      "/x-template-next-012-gallery-3.avif",
-      "/x-template-next-012-gallery-4.avif",
-      "/x-template-next-012-gallery-5.avif",
-      "/x-template-next-012-gallery-6.avif",
-      "/x-template-next-012-gallery-7.avif",
-      "/x-template-next-012-gallery-8.avif"
-    ]
-  },
-  {
-    "name": "x-template-055",
-    "url": "https://x-template-055.vercel.app/",
-    "image": "/screenshots/x-template-055.png",
+    "image": "/screenshots/x-template-001.png",
     "frameworkVersion": "8.3.5",
     "languages": [
-      "typescript"
-    ],
-    "technologies": [],
-    "usesDatabase": false,
-    "sourceRepository": "https://github.com/Ex2-Axon/x-template-055",
-    "deploymentPlatform": "Vercel",
-    "deployedUrl": "https://x-template-055.vercel.app/",
-    "salePrice": 2500,
-    "salePriceCurrency": "THB",
-    "about": "ตัวอย่างเว็บไซต์ที่พักแบบหน้าเดียวสำหรับสาธิตเทมเพลต 2 สไตล์: Baan Suan Lodge และ City Inn Minimal ผู้ใช้สลับรูปแบบได้จากแถบด้านบน โดยเนื้อหาห้องพัก แกลเลอรี ที่อยู่ และข้อมูลติดต่อจะเปลี่ยนตามแบบที่เลือก",
-    "badges": [
-      {
-        "label": "Vite 8.3.5",
-        "url": "https://micro-badged-tags.vercel.app/badge.svg?text=Vite+8.3.5&style=flat"
-      },
-      {
-        "label": "typescript",
-        "url": "https://micro-badged-tags.vercel.app/badge.svg?text=&leftType=icon&left=typescript&style=flat"
-      }
-    ]
-  },
-  {
-    "name": "x-template-056",
-    "url": "https://x-template-056.vercel.app/",
-    "image": "/screenshots/x-template-056.png",
-    "frameworkVersion": "8.3.5",
-    "languages": [
-      "typescript"
-    ],
-    "technologies": [],
-    "usesDatabase": false,
-    "sourceRepository": "https://github.com/Ex2-Axon/x-template-056",
-    "deploymentPlatform": "Vercel",
-    "deployedUrl": "https://x-template-056.vercel.app/",
-    "salePrice": 2500,
-    "salePriceCurrency": "THB",
-    "about": "ตัวอย่างเว็บไซต์ที่พักแบบหน้าเดียวสำหรับสาธิตเทมเพลต 2 สไตล์: Baan Suan Lodge และ City Inn Minimal ผู้ใช้สลับรูปแบบได้จากแถบด้านบน โดยเนื้อหาห้องพัก แกลเลอรี ที่อยู่ และข้อมูลติดต่อจะเปลี่ยนตามแบบที่เลือก",
-    "badges": [
-      {
-        "label": "Vite 8.3.5",
-        "url": "https://micro-badged-tags.vercel.app/badge.svg?text=Vite+8.3.5&style=flat"
-      },
-      {
-        "label": "typescript",
-        "url": "https://micro-badged-tags.vercel.app/badge.svg?text=&leftType=icon&left=typescript&style=flat"
-      }
-    ]
-  },
-  {
-    "name": "x-template-057",
-    "url": "https://x-template-057.vercel.app/",
-    "image": "/screenshots/x-template-057.png",
-    "frameworkVersion": "8.0.12",
-    "languages": [
-      "typescript"
+      "typescript",
+      "html"
     ],
     "technologies": [
       "react"
     ],
     "usesDatabase": false,
-    "sourceRepository": "https://github.com/Ex2-Axon/x-template-057",
-    "deploymentPlatform": "Vercel",
-    "deployedUrl": "https://x-template-057.vercel.app/",
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-001",
+    "deploymentPlatform": "github",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-001/",
     "salePrice": 2500,
     "salePriceCurrency": "THB",
-    "about": "Template from x-template-057",
+    "about": "template example# 1",
     "badges": [
       {
-        "label": "Vite 8.0.12",
-        "url": "https://micro-badged-tags.vercel.app/badge.svg?text=Vite+8.0.12&style=flat"
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
       },
       {
-        "label": "typescript",
-        "url": "https://micro-badged-tags.vercel.app/badge.svg?text=&leftType=icon&left=typescript&style=flat"
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      },
+      {
+        "label": "React",
+        "url": "/badges/react.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-002",
+    "url": "https://ex2-axon.github.io/x-template-002/",
+    "image": "/screenshots/x-template-002.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-002",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-002/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 2",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-003",
+    "url": "https://ex2-axon.github.io/x-template-003/",
+    "image": "/screenshots/x-template-003.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-003",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-003/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 3",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-004",
+    "url": "https://ex2-axon.github.io/x-template-004/",
+    "image": "/screenshots/x-template-004.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-004",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-004/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 4",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-005",
+    "url": "https://ex2-axon.github.io/x-template-005/",
+    "image": "/screenshots/x-template-005.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-005",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-005/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 5",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-006",
+    "url": "https://ex2-axon.github.io/x-template-006/",
+    "image": "/screenshots/x-template-006.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-006",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-006/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 6",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-007",
+    "url": "https://ex2-axon.github.io/x-template-007/",
+    "image": "/screenshots/x-template-007.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-007",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-007/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 7",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-008",
+    "url": "https://ex2-axon.github.io/x-template-008/",
+    "image": "/screenshots/x-template-008.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-008",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-008/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 8",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-009",
+    "url": "https://ex2-axon.github.io/x-template-009/",
+    "image": "/screenshots/x-template-009.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-009",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-009/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 9",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-010",
+    "url": "https://ex2-axon.github.io/x-template-010/",
+    "image": "/screenshots/x-template-010.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-010",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-010/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 10",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-011",
+    "url": "https://ex2-axon.github.io/x-template-011/",
+    "image": "/screenshots/x-template-011.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-011",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-011/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 11",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-012",
+    "url": "https://ex2-axon.github.io/x-template-012/",
+    "image": "/screenshots/x-template-012.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-012",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-012/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 12",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-013",
+    "url": "https://ex2-axon.github.io/x-template-013/",
+    "image": "/screenshots/x-template-013.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-013",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-013/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 13",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-014",
+    "url": "https://ex2-axon.github.io/x-template-014/",
+    "image": "/screenshots/x-template-014.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-014",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-014/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 14",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-015",
+    "url": "https://ex2-axon.github.io/x-template-015/",
+    "image": "/screenshots/x-template-015.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-015",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-015/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 15",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-016",
+    "url": "https://ex2-axon.github.io/x-template-016/",
+    "image": "/screenshots/x-template-016.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-016",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-016/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 16",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-017",
+    "url": "https://ex2-axon.github.io/x-template-017/",
+    "image": "/screenshots/x-template-017.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-017",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-017/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 17",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-018",
+    "url": "https://ex2-axon.github.io/x-template-018/",
+    "image": "/screenshots/x-template-018.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-018",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-018/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 18",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-019",
+    "url": "https://ex2-axon.github.io/x-template-019/",
+    "image": "/screenshots/x-template-019.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-019",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-019/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 19",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-020",
+    "url": "https://ex2-axon.github.io/x-template-020/",
+    "image": "/screenshots/x-template-020.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-020",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-020/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 20",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-021",
+    "url": "https://ex2-axon.github.io/x-template-021/",
+    "image": "/screenshots/x-template-021.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-021",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-021/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 21",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-022",
+    "url": "https://ex2-axon.github.io/x-template-022/",
+    "image": "/screenshots/x-template-022.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-022",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-022/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 22",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-023",
+    "url": "https://ex2-axon.github.io/x-template-023/",
+    "image": "/screenshots/x-template-023.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-023",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-023/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 23",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-024",
+    "url": "https://ex2-axon.github.io/x-template-024/",
+    "image": "/screenshots/x-template-024.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-024",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-024/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 24",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-025",
+    "url": "https://ex2-axon.github.io/x-template-025/",
+    "image": "/screenshots/x-template-025.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-025",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-025/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 25",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-026",
+    "url": "https://ex2-axon.github.io/x-template-026/",
+    "image": "/screenshots/x-template-026.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-026",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-026/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 26",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-027",
+    "url": "https://ex2-axon.github.io/x-template-027/",
+    "image": "/screenshots/x-template-027.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-027",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-027/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 27",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-028",
+    "url": "https://ex2-axon.github.io/x-template-028/",
+    "image": "/screenshots/x-template-028.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-028",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-028/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 28",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-029",
+    "url": "https://ex2-axon.github.io/x-template-029/",
+    "image": "/screenshots/x-template-029.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-029",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-029/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 29",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-030",
+    "url": "https://ex2-axon.github.io/x-template-030/",
+    "image": "/screenshots/x-template-030.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-030",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-030/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 30",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-031",
+    "url": "https://ex2-axon.github.io/x-template-031/",
+    "image": "/screenshots/x-template-031.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-031",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-031/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 31",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-032",
+    "url": "https://ex2-axon.github.io/x-template-032/",
+    "image": "/screenshots/x-template-032.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-032",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-032/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 32",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-033",
+    "url": "https://ex2-axon.github.io/x-template-033/",
+    "image": "/screenshots/x-template-033.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-033",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-033/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 33",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-034",
+    "url": "https://ex2-axon.github.io/x-template-034/",
+    "image": "/screenshots/x-template-034.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-034",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-034/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 34",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-035",
+    "url": "https://ex2-axon.github.io/x-template-035/",
+    "image": "/screenshots/x-template-035.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-035",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-035/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 35",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-036",
+    "url": "https://ex2-axon.github.io/x-template-036/",
+    "image": "/screenshots/x-template-036.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-036",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-036/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 36",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-037",
+    "url": "https://ex2-axon.github.io/x-template-037/",
+    "image": "/screenshots/x-template-037.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-037",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-037/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 37",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-038",
+    "url": "https://ex2-axon.github.io/x-template-038/",
+    "image": "/screenshots/x-template-038.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-038",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-038/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 38",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-039",
+    "url": "https://ex2-axon.github.io/x-template-039/",
+    "image": "/screenshots/x-template-039.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-039",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-039/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 39",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-040",
+    "url": "https://ex2-axon.github.io/x-template-040/",
+    "image": "/screenshots/x-template-040.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-040",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-040/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 40",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-041",
+    "url": "https://ex2-axon.github.io/x-template-041/",
+    "image": "/screenshots/x-template-041.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-041",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-041/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 41",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-042",
+    "url": "https://ex2-axon.github.io/x-template-042/",
+    "image": "/screenshots/x-template-042.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-042",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-042/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 42",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-043",
+    "url": "https://ex2-axon.github.io/x-template-043/",
+    "image": "/screenshots/x-template-043.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-043",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-043/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 43",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-044",
+    "url": "https://ex2-axon.github.io/x-template-044/",
+    "image": "/screenshots/x-template-044.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-044",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-044/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 44",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-045",
+    "url": "https://ex2-axon.github.io/x-template-045/",
+    "image": "/screenshots/x-template-045.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-045",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-045/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 45",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-046",
+    "url": "https://ex2-axon.github.io/x-template-046/",
+    "image": "/screenshots/x-template-046.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-046",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-046/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 46",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-047",
+    "url": "https://ex2-axon.github.io/x-template-047/",
+    "image": "/screenshots/x-template-047.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-047",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-047/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 47",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-048",
+    "url": "https://ex2-axon.github.io/x-template-048/",
+    "image": "/screenshots/x-template-048.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-048",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-048/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 48",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-049",
+    "url": "https://ex2-axon.github.io/x-template-049/",
+    "image": "/screenshots/x-template-049.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-049",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-049/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 49",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-050",
+    "url": "https://ex2-axon.github.io/x-template-050/",
+    "image": "/screenshots/x-template-050.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-050",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-050/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 50",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-051",
+    "url": "https://ex2-axon.github.io/x-template-051/",
+    "image": "/screenshots/x-template-051.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-051",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-051/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 51",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-052",
+    "url": "https://ex2-axon.github.io/x-template-052/",
+    "image": "/screenshots/x-template-052.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-052",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-052/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 52",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-053",
+    "url": "https://ex2-axon.github.io/x-template-053/",
+    "image": "/screenshots/x-template-053.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-053",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-053/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 53",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
+      }
+    ]
+  },
+  {
+    "name": "x-template-054",
+    "url": "https://ex2-axon.github.io/x-template-054/",
+    "image": "/screenshots/x-template-054.png",
+    "frameworkVersion": "8.3.5",
+    "languages": [
+      "TypeScript",
+      "HTML"
+    ],
+    "technologies": [
+      "React"
+    ],
+    "usesDatabase": false,
+    "sourceRepository": "https://github.com/Ex2-Axon/x-template-054",
+    "deploymentPlatform": "GitHub",
+    "deployedUrl": "https://ex2-axon.github.io/x-template-054/",
+    "salePrice": 2500,
+    "salePriceCurrency": "THB",
+    "about": "template example# 54",
+    "badges": [
+      {
+        "label": "Vite 8.3.5",
+        "url": "/badges/vite.svg"
+      },
+      {
+        "label": "TypeScript",
+        "url": "/badges/typescript.svg"
+      },
+      {
+        "label": "HTML",
+        "url": "/badges/html.svg"
       }
     ]
   }

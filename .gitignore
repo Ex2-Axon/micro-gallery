@@ -63,3 +63,4 @@ github_sync.py
 github_ui.py 
 github_update.py
 AGENTS.md
+!python-tools/AGENTS.md

@@ -86,7 +86,7 @@ class TemplateRegistrarWindow:
         self._entry(
             container,
             8,
-            "Database logo ID (เช่น supabase)",
+            "Database badge filename (เช่น supabase)",
             self.database_icon,
         )
         self._entry(container, 9, "Source repository URL", self.source_repository)
